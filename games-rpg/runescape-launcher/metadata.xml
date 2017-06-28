@@ -5,8 +5,16 @@
 		<email>jscinoz@jscinoz.so</email>
 		<name>Jack Coulter</name>
 	</maintainer>
+	<maintainer type="person">
+		<email>brentonhorne77@gmail.com</email>
+		<name>Brenton Horne</name>
+	</maintainer>
 	<maintainer type="project">
 		<email>proxy-maint@gentoo.org</email>
 		<name>Proxy Maintainers</name>
 	</maintainer>
+	<use>
+		<flag name="bumblebee">Build a desktop configuration file to run application using Bumblebee's Optirun.</flag>
+		<flag name="kde">Provide KDE4 support for application.</flag>
+	</use>
 </pkgmetadata>
