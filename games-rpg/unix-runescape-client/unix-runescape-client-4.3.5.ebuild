@@ -1,4 +1,6 @@
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 
@@ -17,18 +19,18 @@ KEYWORDS="~amd64"
 IUSE="alsa-oss cario-nogl p7zip pulseaudio wine"
 
 DEPEND="virtual/jre
-          dev-lang/perl
-          dev-perl/Archive-Extract
-          dev-perl/Config-IniFiles
-          dev-perl/IO-stringy
-          dev-perl/Wx
-          media-libs/libpng:1.2
-          net-misc/wget
-          alsa-oss? ( media-libs/alsa-oss )
-          cario-nogl? ( x11-libs/cairo[-opengl] )
-          p7zip? ( app-arch/p7zip )
-          pulseaudio? ( media-sound/pulseaudio )
-          wine? ( app-emulation/wine )"
+		dev-lang/perl
+		dev-perl/Archive-Extract
+		dev-perl/Config-IniFiles
+		dev-perl/IO-stringy
+		dev-perl/wxperl
+		media-libs/libpng:1.2
+		net-misc/wget
+		alsa-oss? ( media-libs/alsa-oss )
+		cario-nogl? ( x11-libs/cairo[-opengl] )
+		p7zip? ( app-arch/p7zip )
+		pulseaudio? ( media-sound/pulseaudio )
+		wine? ( app-emulation/wine )"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
@@ -39,9 +41,9 @@ src_prepare() {
 
   # Set java path to system-java
   sed -i -e "s/preferredjava=default-java/preferredjava=\/etc\/java-config-2\/current-system-vm\/bin\/java/" \
-       "${S}/runescape/share/configs/settings.conf" || die "sed failed"
+  	"${S}/runescape/share/configs/settings.conf" || die "sed failed"
   sed -i -e "s/preferredjava=default-java/preferredjava=\/etc\/java-config-2\/current-system-vm\/bin\/java/" \
-       "${S}/runescape/share/configs/settings.conf.example" || die "sed failed"
+  	"${S}/runescape/share/configs/settings.conf.example" || die "sed failed"
 }
 
 src_install() {
@@ -65,7 +67,7 @@ src_install() {
   doexe rsu/bin/*
 
   make_desktop_entry runescape "RuneScape Unix Client" \
-       "${GAMES_PREFIX_OPT}/runescape/share/runescape.png" || die "make_desktop_entry failed"
+  	"${GAMES_PREFIX_OPT}/runescape/share/runescape.png" || die "make_desktop_entry failed"
 
   dodoc AUTHORS COPYING changelog.txt bin/README.md || die "dodoc failed"
 
