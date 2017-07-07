@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 PYTHON_COMPAT=( python2_7 )
@@ -32,8 +33,7 @@ RDEPEND="x11-libs/gtk+:2
 	dev-libs/libxml2
 	dev-libs/popt
 	dev-python/pygtk[${PYTHON_USEDEP}]
-	virtual/libintl
-	${PYTHON_DEPS}"
+	virtual/libintl"
 DEPEND="${RDEPEND}
 	app-text/texi2html
 	dev-perl/XML-Parser

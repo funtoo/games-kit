@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit eutils games
@@ -16,13 +17,7 @@ IUSE="+curl dedicated maps +openal +theora +vorbis"
 
 RDEPEND="sys-libs/zlib
 	!dedicated? (
-		|| (
-			(
-				>=media-libs/speex-1.2.0
-				media-libs/speexdsp
-			)
-			<media-libs/speex-1.2.0
-		)
+		media-libs/speex
 		virtual/jpeg:0
 		media-libs/libsdl[opengl,video,X]
 		virtual/opengl

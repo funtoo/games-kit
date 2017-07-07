@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -13,7 +14,6 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~arm ppc ppc64 x86 ~x86-fbsd"
 IUSE="cpu_flags_x86_avx gtk opengl python sqlite cpu_flags_x86_sse cpu_flags_x86_sse2 threads"
-REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="dev-libs/glib:2
 	media-libs/freetype:2

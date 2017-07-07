@@ -1,6 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-
+# $Id$
 EAPI=5
 CDROM_OPTIONAL="yes"
 inherit eutils unpacker cdrom games
@@ -30,7 +30,7 @@ src_install() {
 
 	if use cdinstall ; then
 		einfo "Copying files from CD ..."
-		newins "${CDROM_ABSMATCH}" pak0.pk3
+		doins "${CDROM_ROOT}/${CDROM_MATCH}"
 		eend 0
 	fi
 

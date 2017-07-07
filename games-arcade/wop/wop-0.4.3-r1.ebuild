@@ -1,5 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 EAPI=5
 inherit eutils toolchain-funcs games
 
@@ -37,8 +38,7 @@ src_prepare() {
 		woprc \
 		|| die "sed failed"
 	epatch "${FILESDIR}"/${P}-Makefile.patch \
-		"${FILESDIR}"/${P}-gcc43.patch \
-		"${FILESDIR}"/${P}-gcc6.patch
+		"${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_compile() {

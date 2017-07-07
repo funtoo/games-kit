@@ -1,22 +1,25 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
-EAPI=6
+EAPI=5
 
-inherit cmake-utils
+[[ ${PV} = 9999* ]] && GIT="git-2"
+EGIT_REPO_URI="git://repo.or.cz/tuxanci.git"
+
+inherit games cmake-utils ${GIT}
 
 DESCRIPTION="Tuxanci is first tux shooter inspired by game Bulanci"
 HOMEPAGE="http://www.tuxanci.org/"
-
-if [[ ${PV} = *9999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="git://repo.or.cz/tuxanci.git"
+if [[ ${PV} = 9999* ]]; then
+	SRC_URI=""
+	KEYWORDS=""
 else
-	SRC_URI="http://dev.gentooexperimental.org/~scarabeus/${P}.tar.xz"
+	SRC_URI="http://download.${PN}.org/${P}.tar.bz2"
 	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 fi
-
 LICENSE="GPL-2"
+
 SLOT="0"
 IUSE="debug dedicated +ipv6 nls opengl physfs +sound"
 
@@ -40,20 +43,31 @@ DEPEND="${RDEPEND}
 "
 
 src_configure() {
-	local mycmakeargs=(
-		-DWITH_AUDIO=$(usex sound)
-		-DBUILD_SERVER=$(usex dedicated)
-		-DWITH_NLS=$(usex nls)
-		-DWITH_PHYSFS=$(usex physfs)
-		-DWITH_OPENGL=$(usex opengl)
-		-DENABLE_IPV6=$(usex ipv6)
-		-DDEVELOPER=$(usex debug)
-		-DCMAKE_INSTALL_ICONDIR="${EPREFIX}"/usr/pixmaps/
-		-DCMAKE_INSTALL_DESKTOPDIR="${EPREFIX}"/usr/applications/
-		-DCMAKE_DATA_PATH="${EPREFIX}"/usr/share/
-		-DCMAKE_LOCALE_PATH="${EPREFIX}"/usr/share/locale/
-		-DCMAKE_DOC_PATH="${EPREFIX}"/usr/share/doc/${PF}
-		-DCMAKE_CONF_PATH="${EPREFIX}"/etc
+	local mycmakeargs+=(
+		$(cmake-utils_use_with sound AUDIO)
+		$(cmake-utils_use_build dedicated SERVER)
+		$(cmake-utils_use_with nls)
+		$(cmake-utils_use_with physfs)
+		$(cmake-utils_use_with opengl)
+		$(cmake-utils_use_enable ipv6)
+		$(cmake-utils_use debug DEVELOPER)
 	)
+
+	mycmakeargs+=(
+		"-DCMAKE_INSTALL_PREFIX=${GAMES_PREFIX}"
+		"-DCMAKE_INSTALL_ICONDIR=${GAMES_DATADIR_BASE}/pixmaps/"
+		"-DCMAKE_INSTALL_DESKTOPDIR=${GAMES_DATADIR_BASE}/applications/"
+		"-DCMAKE_DATA_PATH=${GAMES_DATADIR}"
+		"-DCMAKE_LOCALE_PATH=${GAMES_DATADIR_BASE}/locale/"
+		"-DCMAKE_DOC_PATH=${GAMES_DATADIR_BASE}/doc/${PF}"
+		"-DCMAKE_CONF_PATH=${GAMES_SYSCONFDIR}"
+	)
+
 	cmake-utils_src_configure
+}
+
+src_install() {
+	cmake-utils_src_install
+
+	prepgamesdirs
 }

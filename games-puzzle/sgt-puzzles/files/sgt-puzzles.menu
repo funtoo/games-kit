@@ -4,16 +4,13 @@
   <Name>Applications</Name>
   <Menu>
     <Name>Games</Name>
-    <Exclude>
-      <Category>X-sgt-puzzles</Category>
-    </Exclude>
     <Menu>
       <Name>Puzzles</Name>
       <Directory>sgt-puzzles.directory</Directory>
       <Include>
       	<And>
 	  <All></All>
-          <Category>X-sgt-puzzles</Category>
+          <Category>sgt-puzzles</Category>
 	</And>
       </Include>
     </Menu> <!-- End Puzzles -->

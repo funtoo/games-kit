@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 inherit autotools eutils multilib
@@ -33,7 +34,6 @@ PATCHES=(
 	"${FILESDIR}"/${P}-flags.patch
 	"${FILESDIR}"/${P}-format.patch
 	"${FILESDIR}"/${P}-noXmuXt.patch
-	"${FILESDIR}"/${P}-gcc6.patch
 )
 
 src_prepare() {

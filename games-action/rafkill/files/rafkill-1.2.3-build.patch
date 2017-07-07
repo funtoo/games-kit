@@ -1,5 +1,5 @@
---- a/SConstruct
-+++ b/SConstruct
+--- SConstruct
++++ SConstruct
 @@ -8,8 +8,8 @@
  
  print "Use 'scons -h' for help"
