@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xevil/xevil-2.02_p2-r1.ebuild,v 1.6 2010/10/18 16:14:49 mr_bones_ Exp $
+# $Id$
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DEB_PATCH=7
@@ -14,13 +14,10 @@ SRC_URI="http://www.xevil.com/download/stable/xevilsrc${MY_PV}.zip
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc x86 amd64"
+KEYWORDS="ppc x86"
 IUSE=""
 
-RDEPEND="x11-libs/libXpm
-	media-fonts/font-adobe-75dpi
-	media-fonts/font-adobe-100dpi"
-
+RDEPEND="x11-libs/libXpm"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
@@ -35,15 +32,13 @@ src_prepare() {
 		-e "s:CFLAGS=\":CFLAGS=\"${CXXFLAGS} :g" \
 		-e 's:-lXpm:-lXpm -lpthread:g' \
 		-e "s:LINK_FLAGS=\":LINK_FLAGS=\"${LDFLAGS} :" \
-		config.mk || die "sed failed"
+		config.mk || die
 	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
-	epatch "${FILESDIR}"/${P}-x86_64.patch
 }
 
 src_install() {
-	dogamesbin x11/REDHAT_LINUX/xevil || die "dogamesbin failed"
-	newgamesbin x11/REDHAT_LINUX/serverping xevil-serverping \
-		|| die "newgamesbin failed"
+	dogamesbin x11/REDHAT_LINUX/xevil
+	newgamesbin x11/REDHAT_LINUX/serverping xevil-serverping
 	dodoc readme.txt
 	prepgamesdirs
 }
