@@ -103,9 +103,6 @@ games-emulation/pcsxr:sdl - Use SDL sound backend (other parts of SDL are used u
 games-emulation/ppsspp:qt4 - Adds support for the Qt GUI/Application Toolkit version 4.x
 games-emulation/ppsspp:qt5 - Adds support for the Qt GUI/Application Toolkit version 5.x
 games-emulation/ppsspp:sdl - Adds support for Simple Direct Layer (media library)
-games-emulation/sdlmame:arcade - Enable the Multiple Arcade Machine Emulator for arcade games support
-games-emulation/sdlmame:mess - Enable the Multi Emulator Super System for game system support
-games-emulation/sdlmame:tools - Build development tools shared between sdlmame and sdlmess
 games-emulation/snes9x:netplay - Enable playing ROMs over the network (not recommended)
 games-emulation/snes9x:xrandr - Enable support for the X xrandr extension
 games-emulation/vbam:link - Enable GBA linking functionality
