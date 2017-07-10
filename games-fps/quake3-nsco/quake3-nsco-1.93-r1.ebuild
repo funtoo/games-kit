@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 MOD_DESC="a US Navy Seals conversion mod"
@@ -14,7 +13,7 @@ SRC_URI="mirror://quakeunity/modifications/navyseals/nsco_beta19.zip
 	mirror://quakeunity/modifications/navyseals/nsco_beta193upd.zip"
 
 LICENSE="freedist"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 x86"
 IUSE="dedicated opengl"
 RESTRICT="strip mirror"
 

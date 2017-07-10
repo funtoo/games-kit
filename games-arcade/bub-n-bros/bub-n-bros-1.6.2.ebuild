@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -13,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT Artistic-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="dev-python/pygame[${PYTHON_USEDEP}]

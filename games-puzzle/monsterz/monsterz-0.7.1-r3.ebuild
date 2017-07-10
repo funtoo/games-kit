@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -12,7 +11,7 @@ SRC_URI="http://sam.zoy.org/projects/monsterz/${P}.tar.gz"
 
 LICENSE="GPL-1+ LGPL-2+ WTFPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc x86"
+KEYWORDS="amd64 hppa x86"
 IUSE=""
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 

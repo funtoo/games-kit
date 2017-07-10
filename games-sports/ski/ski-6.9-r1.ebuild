@@ -1,9 +1,10 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
+
 PYTHON_COMPAT=( python2_7 )
+
 inherit eutils python-single-r1
 
 DESCRIPTION="A simple text-mode skiing game"
@@ -12,15 +13,12 @@ SRC_URI="http://www.catb.org/~esr/ski/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-DEPEND=""
-RDEPEND=""
-
-pkg_setup() {
-	python-single-r1_pkg_setup
-}
+RDEPEND="${PYTHON_DEPS}"
+DEPEND="${RDEPEND}"
 
 src_install() {
 	dobin ski

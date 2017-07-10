@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 inherit eutils games
@@ -11,7 +10,7 @@ SRC_URI="http://evlweb.eecs.uic.edu/aej/BATTALION/${PN}${PV}.tar.bz2"
 
 LICENSE="battalion HPND"
 SLOT="0"
-KEYWORDS="ppc x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="virtual/opengl

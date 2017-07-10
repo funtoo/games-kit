@@ -1,10 +1,10 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
+
 PYTHON_COMPAT=( python2_7 )
-WANT_CMAKE=always
+
 inherit eutils python-any-r1 cmake-utils gnome2-utils games
 
 DESCRIPTION="Reimplementation of the Infinity engine"
@@ -39,7 +39,7 @@ src_prepare() {
 }
 
 src_configure() {
-	mycmakeargs=(
+	local mycmakeargs=(
 		-DCMAKE_INSTALL_PREFIX="${GAMES_PREFIX}"
 		-DBIN_DIR="${GAMES_BINDIR}"
 		-DDATA_DIR="${GAMES_DATADIR}/gemrb"

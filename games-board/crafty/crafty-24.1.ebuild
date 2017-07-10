@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 inherit flag-o-matic toolchain-funcs eutils games
@@ -13,7 +12,7 @@ SRC_URI="http://www.craftychess.com/${P}.zip
 
 LICENSE="crafty"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 x86"
 IUSE="no-opts"
 RESTRICT="test"
 

@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 fromcvs=0
@@ -18,7 +17,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="hppa ppc x86"
+KEYWORDS="hppa x86"
 IUSE="demo pic perl opengl"
 
 RDEPEND="media-libs/libsdl

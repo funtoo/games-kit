@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 WX_GTK_VER=3.0
@@ -12,7 +11,7 @@ SRC_URI="mirror://sourceforge/scorched3d/Scorched3D-${PV}-src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="amd64 ppc64 x86"
 IUSE="dedicated mysql"
 
 RDEPEND="media-libs/libsdl[video]
