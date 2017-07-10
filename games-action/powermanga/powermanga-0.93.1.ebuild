@@ -1,5 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit eutils autotools games
@@ -10,7 +11,7 @@ SRC_URI="http://linux.tlk.fr/games/Powermanga/download/${P}.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND=">=media-libs/libsdl-1.2[sound,joystick,video]

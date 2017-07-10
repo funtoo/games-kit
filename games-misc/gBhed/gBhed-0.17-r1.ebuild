@@ -1,5 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 inherit eutils
@@ -10,7 +11,7 @@ SRC_URI="http://liquidchile.net/software/gbhed/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gtk"
 
 DEPEND="gtk? ( x11-libs/gtk+:2 )"

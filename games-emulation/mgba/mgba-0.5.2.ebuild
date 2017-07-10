@@ -1,5 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
@@ -32,10 +33,6 @@ RDEPEND="
 	sdl? ( media-libs/libsdl2[X,sound,joystick,video,opengl?] )"
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-3.2.2"
-
-PATCHES=(
-	"${FILESDIR}/${P}-imagemagick7.patch"
-)
 
 src_prepare() {
 	default

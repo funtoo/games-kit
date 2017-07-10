@@ -1,5 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit eutils games
@@ -10,7 +11,7 @@ SRC_URI="http://jesshaas.com/lsdldoom/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="arm x86"
+KEYWORDS="arm ppc x86"
 IUSE="+net +shareware freedoom"
 
 DEPEND="media-libs/libsdl[video]

@@ -1,5 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit autotools eutils flag-o-matic games
@@ -12,7 +13,7 @@ SRC_URI="mirror://sourceforge/smclone/${P}.tar.bz2
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="music"
 
 RDEPEND="<dev-games/cegui-0.7[opengl,devil]

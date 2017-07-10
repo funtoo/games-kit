@@ -1,5 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 
@@ -14,7 +15,7 @@ SRC_URI="mirror://sourceforge/lyntin/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="tk"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"

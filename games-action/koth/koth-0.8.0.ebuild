@@ -1,5 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit eutils flag-o-matic games
@@ -10,7 +11,7 @@ SRC_URI="https://savannah.nongnu.org/download/${PN}/default.pkg/${PV}/${P}.tar.b
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="media-libs/libggi"

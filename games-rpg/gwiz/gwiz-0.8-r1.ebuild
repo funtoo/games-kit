@@ -1,5 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 inherit eutils flag-o-matic
@@ -8,7 +9,7 @@ DESCRIPTION="clone of old-school Wizardry(tm) games by SirTech"
 HOMEPAGE="http://icculus.org/gwiz/"
 SRC_URI="http://icculus.org/gwiz/${P}.tar.bz2"
 
-KEYWORDS="~alpha ~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""

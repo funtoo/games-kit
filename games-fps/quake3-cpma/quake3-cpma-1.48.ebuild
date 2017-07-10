@@ -1,5 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 MOD_DESC="advanced FPS competition mod"
@@ -13,7 +14,7 @@ SRC_URI="http://packages.vstone.eu/quake3/install/cpma${PV//.}-nomaps.zip
 	http://packages.vstone.eu/quake3/install/cpma-mappack-full.zip"
 
 LICENSE="all-rights-reserved"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="dedicated opengl"
 
 src_prepare() {

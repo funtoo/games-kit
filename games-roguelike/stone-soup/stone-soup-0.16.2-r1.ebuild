@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 ## TODO
 # add sound support (no sound files)
@@ -9,7 +10,7 @@ VIRTUALX_REQUIRED="manual"
 inherit eutils gnome2-utils toolchain-funcs
 
 MY_P="stone_soup-${PV}"
-DESCRIPTION="Role-playing roguelike game of exploration and treasure-hunting in dungeons"
+DESCRIPTION="Dungeon Crawl Stone Soup is a role-playing roguelike game of exploration and treasure-hunting in dungeons"
 HOMEPAGE="http://crawl.develz.org/wordpress/"
 SRC_URI="https://crawl.develz.org/release/stone_soup-${PV}.tar.xz
 	https://dev.gentoo.org/~hasufell/distfiles/${PN}.png
@@ -57,7 +58,6 @@ S_TEST=${WORKDIR}/${MY_P}_test/source
 PATCHES=(
 	"${FILESDIR}"/${P}-respect-flags-and-compiler.patch
 	"${FILESDIR}"/${P}-Use-pkg-config-for-linking-to-ncurses.patch
-	"${FILESDIR}"/${P}-perl526.patch
 )
 
 pkg_setup() {

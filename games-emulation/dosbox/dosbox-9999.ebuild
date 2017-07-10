@@ -1,5 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
@@ -11,7 +12,7 @@ if [[ ${PV} = 9999 ]]; then
 	inherit subversion
 else
 	SRC_URI+=" mirror://sourceforge/dosbox/${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm ~ppc64 ~x86"
+	KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86"
 fi
 
 inherit autotools eutils flag-o-matic

@@ -3,10 +3,10 @@ DEPEND=>=dev-libs/libbulletml-0.0.3 media-libs/sdl-mixer[vorbis] virtual/opengl
 DESCRIPTION=Abstract Shooting Game
 EAPI=6
 HOMEPAGE=http://www.asahi-net.or.jp/~cs8k-cyu/windows/noiz2sa_e.html https://sourceforge.net/projects/noiz2sa/
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=BSD
 RDEPEND=>=dev-libs/libbulletml-0.0.3 media-libs/sdl-mixer[vorbis] virtual/opengl
 SLOT=0
 SRC_URI=mirror://sourceforge/noiz2sa/noiz2sa-0.51a.tar.gz
-_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	e7491451996e8b54c3caeb713285b0fb	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	user	e4b567c44272a719fabf53f0f885d3f7
-_md5_=43dab2e490e64cd49e21e2bdad03abeb
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	e7491451996e8b54c3caeb713285b0fb	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	user	80aaa71614ced86f02ee1a513821dc87
+_md5_=f493a9e9dd47fbe04b2354ec73aa2acb

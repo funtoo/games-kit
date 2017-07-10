@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 inherit eutils toolchain-funcs flag-o-matic user
@@ -11,7 +12,7 @@ SRC_URI="mirror://sourceforge/nethack/${PN}-${MY_PV}-src.tgz"
 
 LICENSE="nethack"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="experimental X"
 
 RDEPEND="sys-libs/ncurses:0=

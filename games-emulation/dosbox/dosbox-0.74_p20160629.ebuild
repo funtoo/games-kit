@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 inherit autotools eutils
@@ -11,7 +12,7 @@ SRC_URI="mirror://gentoo/dosbox-code-0-${PATCH}-dosbox-trunk.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc64 x86"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~sparc x86"
 IUSE="alsa debug hardened opengl"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )

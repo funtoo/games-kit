@@ -1,5 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit eutils toolchain-funcs versionator
@@ -11,7 +12,7 @@ SRC_URI="mirror://sourceforge/glbsp/${PN}_src_${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="fltk"
 
 DEPEND="fltk? ( x11-libs/fltk:1 )"

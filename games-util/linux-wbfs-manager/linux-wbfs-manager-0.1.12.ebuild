@@ -1,5 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 if [[ "${PV}" == "9999" ]]; then
@@ -10,7 +11,7 @@ if [[ "${PV}" == "9999" ]]; then
 else
 	inherit toolchain-funcs
 	SRC_URI="https://linux-wbfs-manager.googlecode.com/files/${P}.tar.gz"
-	KEYWORDS="amd64 x86"
+	KEYWORDS="amd64 ~ppc x86"
 fi;
 
 DESCRIPTION="WBFS manager for Linux using GTK+"

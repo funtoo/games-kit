@@ -1,5 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit eutils games
@@ -10,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="OSL-2.0"
 SLOT="0"
-KEYWORDS="~alpha amd64 x86"
+KEYWORDS="~alpha amd64 ppc x86"
 IUSE=""
 
 DEPEND="virtual/opengl

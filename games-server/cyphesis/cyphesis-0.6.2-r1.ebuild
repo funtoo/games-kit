@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 PYTHON_COMPAT=( python2_7 )
@@ -13,10 +14,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 RESTRICT="test"
 
-RDEPEND="${PYTHON_DEPS}
+RDEPEND="
 	dev-db/postgresql:=
 	>=dev-games/mercator-0.3.3
 	>=dev-games/wfmath-1.0.1

@@ -1,5 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 MOD_DESC="Trickjumping challenges for Quake III"
@@ -24,7 +25,7 @@ SRC_URI="http://q3defrag.org/files/defrag/defrag_${PV}.zip
 	http://www.german-defrag.de/files/defrag/defragpak11.zip"
 
 LICENSE="freedist"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="dedicated opengl"
 
 src_unpack() {

@@ -1,16 +1,16 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
-EAPI=6
+EAPI=5
 
-# QT3SUPPORT_REQUIRED
 KDE_LINGUAS="es"
 KDE_DOC_DIRS="doc/${PN}"
 KDE_HANDBOOK=optional
 inherit kde4-base
 
-DESCRIPTION="MUD client by KDE"
-HOMEPAGE="https://cgit.kde.org/kmuddy.git/"
+DESCRIPTION="MUD client for KDE"
+HOMEPAGE="http://www.kmuddy.com/"
 SRC_URI="http://www.kmuddy.com/releases/stable/${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -26,7 +26,6 @@ PATCHES=(
 	"${FILESDIR}"/${P}-tempnam.patch
 	"${FILESDIR}"/${P}-desktopvalidation.patch
 )
-
 src_configure() {
 	# not in portage yet
 	local mycmakeargs=(

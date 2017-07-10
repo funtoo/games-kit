@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit eutils games
@@ -22,7 +23,7 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/${MY_P}/src
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-{build,sound,gcc6}.patch
+	epatch "${FILESDIR}"/${P}-{build,sound}.patch
 }
 
 src_install() {

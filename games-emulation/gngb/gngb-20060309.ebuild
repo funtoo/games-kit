@@ -1,5 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit autotools eutils games
@@ -10,7 +11,7 @@ SRC_URI="http://m.peponas.free.fr/gngb/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="ppc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="opengl"
 
 DEPEND="media-libs/libsdl[sound,joystick,video]

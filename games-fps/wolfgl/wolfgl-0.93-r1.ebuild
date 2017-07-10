@@ -1,5 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=2
 #ECVS_SERVER="wolfgl.cvs.sourceforge.net:/cvsroot/wolfgl"
@@ -17,7 +18,7 @@ SRC_URI="mirror://gentoo/${P}.tbz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~ppc x86"
 IUSE=""
 
 RDEPEND="virtual/opengl"

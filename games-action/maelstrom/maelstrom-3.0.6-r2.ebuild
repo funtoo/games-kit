@@ -1,5 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit autotools eutils games
@@ -9,7 +10,7 @@ DESCRIPTION="An asteroids battle game"
 HOMEPAGE="http://www.libsdl.org/projects/Maelstrom/"
 SRC_URI="http://www.libsdl.org/projects/Maelstrom/src/${MY_P}.tar.gz"
 
-KEYWORDS="~alpha amd64 x86"
+KEYWORDS="~alpha amd64 ppc x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""

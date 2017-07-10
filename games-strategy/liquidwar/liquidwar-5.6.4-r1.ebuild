@@ -1,5 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit eutils games
@@ -10,7 +11,7 @@ SRC_URI="https://savannah.nongnu.org/download/liquidwar/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc64 x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="nls"
 RESTRICT="test"
 

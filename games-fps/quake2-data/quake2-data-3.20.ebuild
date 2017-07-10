@@ -1,5 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit unpacker eutils cdrom games
@@ -10,7 +11,7 @@ SRC_URI="mirror://idsoftware/quake2/q2-${PV}-x86-full-ctf.exe"
 
 LICENSE="Q2EULA"
 SLOT="0"
-KEYWORDS="~alpha amd64 x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ppc sparc x86 ~x86-fbsd"
 IUSE="videos"
 
 DEPEND="app-arch/unzip"

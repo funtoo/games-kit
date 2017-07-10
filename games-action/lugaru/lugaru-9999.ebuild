@@ -1,8 +1,9 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
-EAPI=6
-inherit eutils cmake-utils mercurial
+EAPI=5
+inherit eutils cmake-utils mercurial games
 
 EHG_REPO_URI="https://bitbucket.org/osslugaru/lugaru/"
 DESCRIPTION="3D arcade with unique fighting system and anthropomorphic characters"
@@ -15,14 +16,14 @@ KEYWORDS=""
 IUSE=""
 
 RDEPEND="
-	media-libs/libsdl[opengl,video]
-	media-libs/libpng:0
-	media-libs/libvorbis
-	media-libs/openal
-	sys-libs/zlib
 	virtual/glu
+	virtual/opengl
+	media-libs/libsdl[opengl,video]
+	media-libs/openal
+	media-libs/libvorbis
 	virtual/jpeg:0
-	virtual/opengl"
+	media-libs/libpng:0
+	sys-libs/zlib"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
@@ -30,15 +31,11 @@ src_unpack() {
 	mercurial_src_unpack
 }
 
-PATCHES=(
-	"${FILESDIR}/${P}-dir.patch"
-)
-
 src_prepare() {
-	default
+	epatch "${FILESDIR}/${P}-dir.patch"
 	sed -i \
-        -e "s:@GENTOO_DIR@:/usr/share/${PN}:" \
-        Source/OpenGL_Windows.cpp || die
+		-e "s:@GENTOO_DIR@:${GAMES_DATADIR}/${PN}:" \
+		Source/OpenGL_Windows.cpp || die
 }
 
 src_configure() {
@@ -54,9 +51,10 @@ src_compile() {
 }
 
 src_install() {
-	dobin "${WORKDIR}/${P}_build/lugaru"
-	insinto /usr/share/${PN}
+	dogamesbin "${WORKDIR}/${P}_build/lugaru"
+	insinto "${GAMES_DATADIR}/${PN}"
 	doins -r Data/
 	newicon Source/win-res/Lugaru.png ${PN}.png
 	make_desktop_entry ${PN} Lugaru ${PN}
+	prepgamesdirs
 }

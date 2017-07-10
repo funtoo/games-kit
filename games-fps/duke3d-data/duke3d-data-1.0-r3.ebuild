@@ -1,5 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 
@@ -13,7 +14,7 @@ SRC_URI="gog? ( ${GOG_FILE} )"
 
 LICENSE="DUKE3D gog? ( GOG-EULA )"
 SLOT="0"
-KEYWORDS="amd64 hppa x86"
+KEYWORDS="amd64 hppa ppc x86"
 IUSE="gog"
 REQUIRED_USE="^^ ( cdinstall gog )"
 RESTRICT="mirror bindist gog? ( fetch )"

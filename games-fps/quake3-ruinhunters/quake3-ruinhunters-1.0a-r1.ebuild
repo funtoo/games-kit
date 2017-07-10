@@ -1,5 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 MOD_DESC="Anime mod with cartoon actors and arcade-like gameplay"
@@ -14,7 +15,7 @@ SRC_URI="
 	mirror://quakeunity/modifications/ruinhunters/ruin_hunters_v10a_patch.zip"
 
 LICENSE="freedist"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="dedicated opengl"
 
 src_prepare() {

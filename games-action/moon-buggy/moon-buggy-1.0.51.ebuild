@@ -1,5 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit autotools eutils games
@@ -10,7 +11,7 @@ SRC_URI="http://www.seehuhn.de/data/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm x86"
+KEYWORDS="amd64 ~arm ppc x86"
 IUSE=""
 
 RDEPEND="sys-libs/ncurses:0"

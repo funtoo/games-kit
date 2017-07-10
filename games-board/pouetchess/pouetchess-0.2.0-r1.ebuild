@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit eutils scons-utils games
@@ -11,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_src_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="debug"
 
 DEPEND="media-libs/libsdl:0[opengl,video]
@@ -27,8 +28,7 @@ src_prepare() {
 		"${FILESDIR}/${P}-sconstruct-sandbox.patch" \
 		"${FILESDIR}/${P}-nvidia_glext.patch" \
 		"${FILESDIR}/${P}-segfaults.patch" \
-		"${FILESDIR}/${P}-gcc43.patch" \
-		"${FILESDIR}/${P}-gcc6-cmath.patch"
+		"${FILESDIR}/${P}-gcc43.patch"
 	# Fix for LibSDL >= 1.2.10 detection
 	sed -i \
 		-e "s:sdlver.split('.') >= \['1','2','8'\]:sdlver.split('.') >= [1,2,8]:" \

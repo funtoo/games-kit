@@ -1,5 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit eutils unpacker toolchain-funcs games
@@ -10,7 +11,7 @@ SRC_URI="mirror://sourceforge/g2ex/g2ex-setup.run"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~x86-fbsd"
+KEYWORDS="ppc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="media-libs/libsdl[video]

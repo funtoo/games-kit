@@ -1,5 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit games
@@ -10,7 +11,7 @@ SRC_URI="mirror://gentoo/invaders${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~mips ppc64 x86 ~x86-fbsd ~ppc-macos"
+KEYWORDS="alpha amd64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~ppc-macos"
 IUSE=""
 
 RDEPEND="sys-libs/ncurses:0"

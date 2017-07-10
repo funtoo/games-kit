@@ -1,6 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-
+# $Id$
 EAPI=5
 CDROM_OPTIONAL="yes"
 inherit eutils unpacker cdrom games
@@ -11,7 +11,7 @@ SRC_URI="mirror://idsoftware/quake3/linux/linuxq3apoint-${PV}-3.x86.run"
 
 LICENSE="Q3AEULA"
 SLOT="0"
-KEYWORDS="~alpha amd64 x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ppc x86 ~x86-fbsd"
 IUSE=""
 
 S=${WORKDIR}
@@ -30,7 +30,7 @@ src_install() {
 
 	if use cdinstall ; then
 		einfo "Copying files from CD ..."
-		newins "${CDROM_ABSMATCH}" pak0.pk3
+		doins "${CDROM_ROOT}/${CDROM_MATCH}"
 		eend 0
 	fi
 

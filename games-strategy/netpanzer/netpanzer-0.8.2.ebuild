@@ -1,5 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit eutils games
@@ -12,7 +13,7 @@ SRC_URI="mirror://sourceforge/netpanzer.berlios/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="ppc x86"
 IUSE="dedicated"
 
 RDEPEND="dedicated? ( app-misc/screen )

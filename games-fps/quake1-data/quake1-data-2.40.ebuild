@@ -1,5 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 # TODO: if installing off of the 1.01 cd, need to fetch the
 #       quake shareware and use that pak0
@@ -15,7 +16,7 @@ SRC_URI=""
 
 LICENSE="all-rights-reserved"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~ia64 ppc x86"
 IUSE=""
 
 DEPEND="app-arch/lha"

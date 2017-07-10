@@ -1,5 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 MOD_DESC="fast paced, off-handed grapple mod"
@@ -15,7 +16,7 @@ SRC_URI="mirror://quakeunity/modifications/alliance/alliance30.zip
 	http://www.superkeff.net/mods/mods/alliance/alliance30-33.zip"
 
 LICENSE="freedist"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="dedicated opengl"
 
 src_prepare() {
