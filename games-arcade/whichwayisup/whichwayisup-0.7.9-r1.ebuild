@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -14,7 +13,7 @@ SRC_URI="http://hectigo.net/puskutraktori/whichwayisup/${MY_P}.zip"
 
 LICENSE="GPL-2 CC-BY-3.0"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-python/pygame[${PYTHON_USEDEP}]

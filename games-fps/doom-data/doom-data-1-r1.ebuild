@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 EAPI=5
 inherit eutils games
 
@@ -10,7 +9,7 @@ SRC_URI="mirror://gentoo/doom1.wad.bz2"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="amd64 arm sparc x86"
+KEYWORDS="amd64 arm x86"
 IUSE="doomsday"
 
 DEPEND="doomsday? ( games-fps/doomsday )

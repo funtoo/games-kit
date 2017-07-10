@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 GCONF_DEBUG="yes"
@@ -13,7 +12,7 @@ HOMEPAGE="https://wiki.gnome.org/Apps/GnomeMud"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 x86 ~x86-fbsd"
 IUSE="gstreamer"
 
 RDEPEND="x11-libs/gtk+:2

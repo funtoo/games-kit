@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -12,15 +11,22 @@ SRC_URI="mirror://sourceforge/flightgear/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 x86"
 IUSE="dbus debug examples qt5 test +udev +utils vim-syntax"
 
+# zlib is some strange auto-dep from simgear
 COMMON_DEPEND="
 	dev-db/sqlite:3
 	>=dev-games/openscenegraph-3.2.0[png]
 	~dev-games/simgear-${PV}
 	media-libs/openal
-	media-libs/speex
+	|| (
+		(
+			>=media-libs/speex-1.2.0:0
+			media-libs/speexdsp:0
+		)
+		<media-libs/speex-1.2.0:0
+	)
 	media-sound/gsm
 	sys-libs/zlib
 	virtual/glu
@@ -38,10 +44,14 @@ COMMON_DEPEND="
 		virtual/opengl
 	)
 "
+# libXi and libXmu are build-only-deps according to FindGLUT.cmake
 DEPEND="${COMMON_DEPEND}
 	>=dev-libs/boost-1.44
 	>=media-libs/plib-1.8.5
-	utils? ( x11-libs/libXmu )
+	utils? (
+		x11-libs/libXi
+		x11-libs/libXmu
+	)
 "
 RDEPEND="${COMMON_DEPEND}
 	~games-simulation/${PN}-data-${PV}
@@ -73,7 +83,6 @@ src_configure() {
 		-DFG_DATA_DIR=/usr/share/${PN}
 		-DJSBSIM_TERRAIN=ON
 		-DOSG_FSTREAM_EXPORT_FIXED=OFF # TODO also see simgear
-		-DSIMGEAR_SHARED=ON
 		-DSP_FDMS=ON
 		-DSYSTEM_FLITE=ON
 		-DSYSTEM_HTS_ENGINE=ON

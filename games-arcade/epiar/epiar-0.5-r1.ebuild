@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 inherit flag-o-matic eutils games
@@ -11,7 +10,7 @@ SRC_URI="mirror://sourceforge/epiar/${P}.0-src.zip"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="ppc x86 ~x86-fbsd"
+KEYWORDS="x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="media-libs/libsdl[video]

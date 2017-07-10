@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 inherit eutils flag-o-matic toolchain-funcs games
@@ -11,7 +10,7 @@ SRC_URI="http://tetrinet.or.cz/download/${P}.tar.bz2"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 x86"
 IUSE="ipv6"
 
 RDEPEND=">=sys-libs/ncurses-5:0"

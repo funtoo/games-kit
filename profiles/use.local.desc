@@ -14,6 +14,14 @@ games-action/d2x-rebirth:l10n_de - Provides German translations for the game's b
 games-action/d2x-rebirth:music - Support for ingame music
 games-action/d2x-rebirth:opl3-musicpack - Include alternate version of the game's music, recorded with the Yamaha YMF262 OPL3 soundchip
 games-action/d2x-rebirth:sc55-musicpack - Include alternate version of the game's music, recorded with the Roland Sound Canvas SC-55 MIDI module
+games-action/dxx-rebirth:data - Install data files
+games-action/dxx-rebirth:descent1 - Install Descent 1 resources and executable
+games-action/dxx-rebirth:descent2 - Install Descent 2 resources and executable
+games-action/dxx-rebirth:l10n_de - Provides German translations for the game's briefings, robot descriptions, and outro of the original campaign
+games-action/dxx-rebirth:music - Enable music support
+games-action/dxx-rebirth:opl3-musicpack - Include alternate version of the game's music, recorded with the Yamaha YMF262 OPL3 soundchip
+games-action/dxx-rebirth:sc55-musicpack - Include alternate version of the game's music, recorded with the Roland Sound Canvas SC-55 MIDI module
+games-action/dxx-rebirth:textures - Include high resolution (640x480) backgrounds, briefing images and fonts (Descent 1)
 games-action/hotline-miami:bundled-libs - Use bundled libraries.
 games-action/hotline-miami:launcher - Install qt launcher
 games-action/minetest:leveldb - Enable LevelDB backend
@@ -21,7 +29,6 @@ games-action/minetest:luajit - Use dev-lang/luajit instead of dev-lang/lua
 games-action/minetest:redis - Enable redis backend via dev-libs/hiredis
 games-action/minetest:server - Build minetest server
 games-action/minetest:spatial - Enable SpatialIndex AreaStore backend
-games-action/openlierox:breakpad - Compile with support for breakpad crash reporting system
 games-action/solar2:bundled-libs - Use the upstream provided bundled libraries.
 games-action/super-hexagon:bundled-libs - Use the upstream provided bundled libraries.
 games-action/supertuxkart:fribidi - Support for right-to-left languages
@@ -66,6 +73,7 @@ games-board/stockfish:armv7 - Build for armv7; enables PIE
 games-board/stockfish:general-32 - Generic unoptimized 32-bits build
 games-board/stockfish:general-64 - Generic unoptimized 64-bits build
 games-board/stockfish:optimize - Enable upstream -O3 optimizations (default enabled)
+games-board/tablebase-syzygy:6-pieces - Install tablebases for 6 pieces (huge!)
 games-board/xboard:default-font - Install the default font that xboard uses
 games-board/xboard:zippy - Enable experimental zippy client
 games-emulation/dolphin:egl - Enable EGL support
@@ -100,9 +108,8 @@ games-emulation/mupen64plus-video-rice:gles2 - Use GLES2 instead of OpenGL
 games-emulation/nestopia:gui - Enable GUI
 games-emulation/pcsxr:cdio - Use libcdio for CD support
 games-emulation/pcsxr:sdl - Use SDL sound backend (other parts of SDL are used unconditionally)
-games-emulation/ppsspp:qt4 - Adds support for the Qt GUI/Application Toolkit version 4.x
-games-emulation/ppsspp:qt5 - Adds support for the Qt GUI/Application Toolkit version 5.x
-games-emulation/ppsspp:sdl - Adds support for Simple Direct Layer (media library)
+games-emulation/ppsspp:headless - Build headless version of the PPSSPP
+games-emulation/ppsspp:system-ffmpeg - Use the system-wide media-video/ffmpeg instead of bundled
 games-emulation/snes9x:netplay - Enable playing ROMs over the network (not recommended)
 games-emulation/snes9x:xrandr - Enable support for the X xrandr extension
 games-emulation/vbam:link - Enable GBA linking functionality
@@ -199,7 +206,6 @@ games-puzzle/nightsky:bundled-libs - Use the upstream provided bundled libraries
 games-puzzle/numptyphysics:user-levels - Install some fun user-created levels
 games-puzzle/pingus:music - Enable playing of background music
 games-puzzle/sgt-puzzles:gtk3 - Use x11-libs/gtk+:3 instead of x11-libs/gtk+:2
-games-puzzle/sgt-puzzles:icons - Use Gentoo packaged icons instead of bundled icons
 games-puzzle/tiny-and-big:bundled-libs - Use the upstream provided bundled libraries.
 games-puzzle/xlogical:alt_gfx - Use alternate graphics which are closer to the original Amiga version
 games-roguelike/FTL:bundled-libs - Use bundled libraries.
@@ -238,14 +244,11 @@ games-rpg/runescape-launcher:bumblebee - Build a desktop configuration file to r
 games-rpg/runescape-launcher:kde - Provide KDE4 support for application.
 games-rpg/sumwars:tools - Builds editor tools
 games-rpg/to-the-moon:bundled-libs - Use bundled libraries
-games-rpg/valyriatear:editor - Compile the Qt editor along with the game
 games-simulation/flightgear:dbus - Enable screensaver DBus interaction
-games-simulation/flightgear:jsbsim - Enables JSBSim Flight Dynamics Model (default)
-games-simulation/flightgear:oldfdm - Enables deprecated Flight Dynamics Models (LaRCsim, UIUC)
-games-simulation/flightgear:qt5 - Builds Qt5 launcher application
-games-simulation/flightgear:udev - Enables event-based Input devices through virtual/udev
-games-simulation/flightgear:utils - Builds various utilities (fgpanel, fgviewer among others)
-games-simulation/flightgear:yasim - Enables YASim Flight Dynamics Model
+games-simulation/flightgear:gdal - Enable alternative terrain engine based on pagedLOD using sci-libs/gdal
+games-simulation/flightgear:qt5 - Build Qt5 launcher application
+games-simulation/flightgear:udev - Enable event-based Input devices through virtual/udev
+games-simulation/flightgear:utils - Build various utilities (fgpanel, fgviewer among others)
 games-simulation/openttd:aplaymidi - Enables midi music in game, using aplaymidi as an external player
 games-simulation/openttd:dedicated - Build only the openttd server, and not the client.
 games-simulation/openttd:lzo - Enables LZO compression for savegames. This is only needed to load extremely old savegames. (versions before 0.2)

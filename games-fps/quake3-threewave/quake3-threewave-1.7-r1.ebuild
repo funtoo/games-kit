@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 MOD_DESC="Threewave CTF"
@@ -14,7 +13,7 @@ SRC_URI="mirror://quakeunity/modifications/threewavectf/threewave_16_full.zip
 	mirror://quakeunity/modifications/threewavectf/threewave_17_update.zip"
 
 LICENSE="freedist"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 x86"
 IUSE="dedicated opengl"
 
 src_unpack() {

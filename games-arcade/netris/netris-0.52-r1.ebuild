@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 inherit eutils games
@@ -13,7 +12,7 @@ SRC_URI="ftp://ftp.netris.org/pub/netris/${P}.tar.gz
 
 LICENSE='GPL-2'
 SLOT=0
-KEYWORDS='amd64 ~mips ppc ~sparc x86 ~x86-fbsd'
+KEYWORDS="amd64 ~mips x86 ~x86-fbsd"
 IUSE=''
 
 DEPEND='sys-libs/ncurses:0='

@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 inherit eutils games
@@ -18,7 +17,7 @@ SRC_URI="ftp://ftp.funet.fi/pub/msdos/games/interplay/${DEMO}
 # See README.TXT
 LICENSE="free-noncomm"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 # d2x-0.2.5-r2 may include the demo data itself

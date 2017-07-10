@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 MOD_DESC="Matrix conversion mod"
@@ -13,7 +12,7 @@ HOMEPAGE="http://www.moddb.com/mods/matrix-quake-3"
 SRC_URI="mirror://quakeunity/modifications/matrix24.zip"
 
 LICENSE="freedist"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 x86"
 IUSE="dedicated opengl"
 
 src_unpack() {

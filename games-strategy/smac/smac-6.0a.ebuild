@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 inherit eutils unpacker cdrom games
@@ -13,7 +12,7 @@ SRC_URI="x86? ( mirror://lokigames/${PN}/${P}-x86.run )
 
 LICENSE="LOKI-EULA"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="+videos"
 RESTRICT="strip"
 

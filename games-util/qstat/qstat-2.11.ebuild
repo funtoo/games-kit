@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 DESCRIPTION="Server statics collector supporting many FPS games"
@@ -9,7 +8,7 @@ SRC_URI="mirror://sourceforge/qstat/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ppc ppc64 x86"
+KEYWORDS="~alpha amd64 ~arm hppa ppc64 x86"
 IUSE="debug"
 
 DEPEND="!sys-cluster/torque"

@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 inherit eutils games
@@ -12,7 +11,7 @@ SRC_URI="http://www.superliminal.com/cube/mc4d-src-${MY_PV}.tgz"
 
 LICENSE="free-noncomm"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="x11-libs/libXaw"

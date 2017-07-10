@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 inherit autotools eutils
@@ -11,7 +10,7 @@ SRC_URI="https://github.com/XQF/xqf/archive/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc x86"
+KEYWORDS="amd64 hppa x86"
 IUSE="bzip2 geoip nls"
 
 RDEPEND="x11-libs/gtk+:2

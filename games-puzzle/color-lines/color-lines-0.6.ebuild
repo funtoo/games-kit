@@ -1,13 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
 inherit eutils games
 
 DESCRIPTION="Color lines game written with SDL with bonus features"
-HOMEPAGE="https://color-lines.googlecode.com/"
+HOMEPAGE="https://github.com/OpenA/color-lines-sdl"
 SRC_URI="https://color-lines.googlecode.com/files/lines_${PV}.tar.gz"
 
 LICENSE="GPL-2"
