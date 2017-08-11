@@ -1,4 +1,3 @@
-# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -68,7 +67,7 @@ src_configure() {
 }
 
 src_install() {
-	cmake-utils_src_install
+
 	dodoc ChangeLog.md
 
 	newenvd "${FILESDIR}/${PN}.envd" 99${PN}

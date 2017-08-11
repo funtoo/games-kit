@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+	<maintainer type="person">
+		<email>brentonhorne77@gmail.com</email>
+		<name>Brenton Horne</name>
+	</maintainer>
 	<maintainer type="project">
 		<email>games@gentoo.org</email>
 		<name>Gentoo Games Project</name>
 	</maintainer>
 	<use>
+		<flag name="bumblebee">Include an extra desktop configuration file to run the application with Bumblebee's Optirun.</flag>
 		<flag name="editor">Include Atlas scenario editor projects</flag>
 		<flag name="lobby">Enable the use of <pkg>net-libs/gloox</pkg>
 			and the multiplayer lobby</flag>
@@ -15,5 +20,6 @@
 	</use>
 	<upstream>
 		<remote-id type="sourceforge">zero-ad</remote-id>
+		<remote-id type="github">0ad/0ad</remote-id>
 	</upstream>
 </pkgmetadata>
