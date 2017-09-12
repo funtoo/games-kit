@@ -51,7 +51,6 @@ games-arcade/performous:tools - Install tools
 games-arcade/performous:webcam - Enable Webcam support
 games-arcade/savagewheels:fmod - Enable the fmod music and sound effects library
 games-arcade/slimevolley:net - Enable network support
-games-arcade/smc:music - Download and install the music files
 games-arcade/tuxanci:physfs - Use dev-games/physfs instead of dev-libs/libzip to load compressed data
 games-arcade/tuxanci:sound - Enable sound
 games-board/cockatrice:client - Build with client
