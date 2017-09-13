@@ -1,9 +1,0 @@
---- a/CMakeLists.txt     2017-04-13 21:18:34.351784957 +1000
-+++ b/CMakeLists.txt     2017-04-13 23:15:14.591880737 +1000
-@@ -8,6 +8,7 @@
-
- # set minimum version
- cmake_minimum_required(VERSION 2.6.0)
-+set (CMAKE_CXX_STANDARD 11)
-
- include(CheckCXXCompilerFlag)

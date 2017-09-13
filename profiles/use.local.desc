@@ -189,8 +189,12 @@ games-fps/turtlearena:mumble - Adds player-location (positional audio) support t
 games-fps/turtlearena:server - Build server target
 games-fps/turtlearena:voice - Adds VoIP support
 games-fps/unreal-tournament-goty:S3TC - Add the extra fancy textures to UT ... only works on certain cards (nvidia/ati/s3)
-games-fps/urbanterror:altgamma - Clearskies - X11-based gamma for Linux
-games-fps/urbanterror:server - Build server target
+games-fps/urbanterror:altgamma - Alternative way for gamma setting with modesetting driver
+games-fps/urbanterror:client - Build binary for client (includes code for non-dedicated server)
+games-fps/urbanterror:mumble - Use Mumble for ingame VoIP (experimental)
+games-fps/urbanterror:opus - Use opus as sound codec
+games-fps/urbanterror:server - Build binary for dedicated server
+games-fps/urbanterror:voip - Use ioq3 ingame VoIP (experimental)
 games-fps/warsow:irc - Enable IRC support
 games-fps/warsow:server - Build server binaries additionally
 games-fps/worldofpadman:maps - Install extra maps (PadPack)
@@ -244,8 +248,6 @@ games-rpg/nwn:sou - Installs the Shadows of Undrentide expension pack
 games-rpg/nwn-data:hou - Install the Hordes of the Underdark expansion pack
 games-rpg/nwn-data:nowin - For those people who cant grab the 1.2 gigs of data files from a windows partition
 games-rpg/nwn-data:sou - Installs the Shadows of Undrentide expension pack
-games-rpg/runescape-launcher:bumblebee - Build a desktop configuration file to run application using Bumblebee's Optirun.
-games-rpg/runescape-launcher:kde - Provide KDE4 support for application.
 games-rpg/sumwars:tools - Builds editor tools
 games-rpg/to-the-moon:bundled-libs - Use bundled libraries
 games-simulation/flightgear:dbus - Enable screensaver DBus interaction
@@ -260,8 +262,8 @@ games-simulation/openttd:dedicated - Build only the openttd server, and not the 
 games-simulation/openttd:lzo - Enables LZO compression for savegames. This is only needed to load extremely old savegames. (versions before 0.2)
 games-simulation/openttd:openmedia - Enables the free open media sets: OpenGFX, OpenSFX, OpenMSX, removing the requirement for proprietary TTD assets to play OpenTTD.
 games-simulation/singularity:music - Install music files
+games-sports/speed-dreams:xrandr - Enable support for the X xrandr extension
 games-sports/xmoto:editor - Depend on inkscape, scripts to convert svg to level (svg2lvl)
-games-strategy/0ad:bumblebee - Include an extra desktop configuration file to run the application with Bumblebee's Optirun.
 games-strategy/0ad:editor - Include Atlas scenario editor projects
 games-strategy/0ad:lobby - Enable the use of net-libs/gloox and the multiplayer lobby
 games-strategy/0ad:nvtt - Support for some uncompressed data formats via media-gfx/nvidia-texture-tools (might be needed for some mods)
@@ -286,29 +288,22 @@ games-strategy/liquidwar6:maps - Install extra maps
 games-strategy/liquidwar6:ogg - Enable mod-ogg via media-libs/sdl-mixer (currently the only sound provider)
 games-strategy/liquidwar6:readline - Enable interactive script shell for hacking
 games-strategy/megaglest:editor - Build map editor
-games-strategy/megaglest:fribidi - Enable fribidi support
-games-strategy/megaglest:ftgl - Use media-libs/ftgl for on-screen fonts
-games-strategy/megaglest:irc - Enable libircclient support
+games-strategy/megaglest:fribidi - Enable FriBIDi support
 games-strategy/megaglest:model-viewer - Build model viewer
 games-strategy/megaglest:streflop - Use the library streflop. Out of synchs may occur if not enabled.
 games-strategy/megaglest:tools - Build model import/export tools
 games-strategy/megaglest:unicode - Use unicode strings for wxwidgets
 games-strategy/megaglest:wxuniversal - Use the wxUniversal port which implements the various GUI controls by drawing them itself
 games-strategy/naev:mixer - Enables media-libs/sdl-mixer sound backend in addition to media-libs/openal one.
-games-strategy/openra:debug - Compile and run with full debugging information
-games-strategy/openra:doc - Generate additional documentation
 games-strategy/openra:tools - Install some development tools such as editor.
-games-strategy/openra:xdg - xdg-utils are used to open web pages
-games-strategy/openra:zenity - zenity is used to display crash dialogs
 games-strategy/seven-kingdoms:network - Enable support for multiplayer via media-libs/sdl-net
 games-strategy/ufo-ai:editor - Build map editor
 games-strategy/uqm:music - download and install music files (large)
 games-strategy/uqm:remix - download and install music remix files (large)
 games-strategy/uqm:voice - download and install voice files (large)
 games-strategy/warzone2100:qt4 - Use qt-gui/qt-opengl for backend rendering instead of sdl
-games-strategy/wesnoth:fribidi - Enable FriBIDi support
+games-strategy/wesnoth:fribidi - Support for right-to-left languages
 games-strategy/wesnoth:server - Enable compilation of server
-games-strategy/wesnoth:tools - Enable building and installation of tools for artists and WML maintainers
 games-util/gslist:web - Enable the web interface
 games-util/pyfa:graph - Enable support for graphs
 games-util/wit:fuse - Enable image mount support via fuse
