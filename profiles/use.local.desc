@@ -196,8 +196,6 @@ games-fps/urbanterror:mumble - Use Mumble for ingame VoIP (experimental)
 games-fps/urbanterror:opus - Use opus as sound codec
 games-fps/urbanterror:server - Build binary for dedicated server
 games-fps/urbanterror:voip - Use ioq3 ingame VoIP (experimental)
-games-fps/warsow:irc - Enable IRC support
-games-fps/warsow:server - Build server binaries additionally
 games-fps/worldofpadman:maps - Install extra maps (PadPack)
 games-fps/xonotic:ode - Enable support for physics engine from dev-games/ode
 games-kids/crayon-physics:bundled-libs - Use the upstream provided bundled libraries.
