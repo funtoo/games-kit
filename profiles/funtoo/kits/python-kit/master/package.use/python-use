@@ -22,5 +22,6 @@ games-rpg/wastesedge python_single_target_python2_7
 games-server/cyphesis python_single_target_python2_7
 games-simulation/singularity python_single_target_python2_7
 games-sports/ski python_single_target_python2_7
+games-strategy/freeorion python_single_target_python2_7
 games-strategy/gwp python_single_target_python2_7
 games-strategy/lightyears python_single_target_python2_7
