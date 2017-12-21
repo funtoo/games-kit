@@ -88,9 +88,6 @@ games-emulation/dosbox:glide - Enable unofficial Glide emulation via media-libs/
 games-emulation/fceux:logo - Enable the ability to add a logo screen when creating AVIs
 games-emulation/generator:sdlaudio - Enable SDL Audio
 games-emulation/higan:icarus - Build icarus library manager
-games-emulation/higan:profile_accuracy - Compile a binary optimized for accuracy
-games-emulation/higan:profile_balanced - Compile a binary with balanced optimization
-games-emulation/higan:profile_performance - Compile a binary optimized for performance
 games-emulation/higan:udev - Enable udev based input
 games-emulation/mednafen:debugger - Build with internal debugger
 games-emulation/mednafen:pax_kernel - Triggers a paxmarking of the binary
@@ -290,7 +287,6 @@ games-strategy/megaglest:tools - Build model import/export tools
 games-strategy/megaglest:unicode - Use unicode strings for wxwidgets
 games-strategy/megaglest:wxuniversal - Use the wxUniversal port which implements the various GUI controls by drawing them itself
 games-strategy/naev:mixer - Enables media-libs/sdl-mixer sound backend in addition to media-libs/openal one.
-games-strategy/openra:tools - Install some development tools such as editor.
 games-strategy/seven-kingdoms:network - Enable support for multiplayer via media-libs/sdl-net
 games-strategy/ufo-ai:editor - Build map editor
 games-strategy/uqm:music - download and install music files (large)
