@@ -90,6 +90,8 @@ games-emulation/fceux:logo - Enable the ability to add a logo screen when creati
 games-emulation/generator:sdlaudio - Enable SDL Audio
 games-emulation/higan:icarus - Build icarus library manager
 games-emulation/higan:udev - Enable udev based input
+games-emulation/m64py:7z - Ensure support for .7z archives.
+games-emulation/m64py:rar - Ensure support for .rar archives.
 games-emulation/mednafen:debugger - Build with internal debugger
 games-emulation/mednafen:pax_kernel - Triggers a paxmarking of the binary
 games-emulation/mupen64plus:audio-sdl - Enable SDL audio plugin.
