@@ -185,6 +185,7 @@ games-fps/qudos:demo - Install the demo files (quake2-demodata) and configure fo
 games-fps/qudos:mods - Build support for the quake2 mission packs
 games-fps/qudos:qmax - Build the pretty version (quake max)
 games-fps/qudos:textures - Install the enhanced textures (quake2-textures)
+games-fps/redeclipse:dedicated - Install only as a dedicated game server
 games-fps/rott:demo - Install the shareware version
 games-fps/sauerbraten:server - Compile server support
 games-fps/turtlearena:mumble - Adds player-location (positional audio) support to VoIP
