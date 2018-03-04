@@ -201,6 +201,10 @@ games-fps/urbanterror:skeetshootmod - Build support for skeetshoot mod for speci
 games-fps/urbanterror:voip - Use ioq3 ingame VoIP (experimental)
 games-fps/worldofpadman:maps - Install extra maps (PadPack)
 games-fps/xonotic:ode - Enable support for physics engine from dev-games/ode
+games-fps/yamagi-quake2:client - Build client
+games-fps/yamagi-quake2:ctf - Build support for the 'Capture The Flag' addon
+games-fps/yamagi-quake2:rogue - Build support for the 'Ground Zero' Mission Pack
+games-fps/yamagi-quake2:xatrix - Build support for the 'The Reckoning' Mission Pack
 games-kids/crayon-physics:bundled-libs - Use the upstream provided bundled libraries.
 games-misc/katawa-shoujo:system-renpy - Use games-engines/renpy instead of the bundled one (experimental)
 games-misc/little-inferno:bundled-libs - Use bundled libraries.
