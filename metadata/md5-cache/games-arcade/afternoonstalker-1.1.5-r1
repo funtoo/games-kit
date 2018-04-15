@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare
+DEPEND=>=dev-games/flatzebra-0.1.6 virtual/pkgconfig >=app-portage/elt-patches-20170317 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=Clone of the 1981 Night Stalker video game by Mattel Electronics
+EAPI=6
+HOMEPAGE=http://perso.b2b2c.ca/sarrazip/dev/afternoonstalker.html
+KEYWORDS=~amd64 ~x86 ~x86-fbsd
+LICENSE=GPL-2
+RDEPEND=>=dev-games/flatzebra-0.1.6
+SLOT=0
+SRC_URI=http://perso.b2b2c.ca/sarrazip/dev/afternoonstalker-1.1.5.tar.gz
+_eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	libtool	e32ea84bf82cf8987965b574672dba93	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_md5_=28c8e004b495cc9464ee5f13b881d6a7

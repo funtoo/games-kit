@@ -1,8 +1,7 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
-inherit games
+EAPI=6
 
 DESCRIPTION="Space invaders clone, using ncurses library"
 HOMEPAGE="https://packages.gentoo.org/package/games-arcade/ascii-invaders"
@@ -17,9 +16,10 @@ RDEPEND="sys-libs/ncurses:0"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-S=${WORKDIR}/invaders
+S="${WORKDIR}/invaders"
 
 src_prepare() {
+	default
 	rm -f Makefile
 }
 
@@ -28,7 +28,6 @@ src_compile() {
 }
 
 src_install() {
-	newgamesbin invaders ${PN}
-	dodoc TODO
-	prepgamesdirs
+	newbin invaders ${PN}
+	einstalldocs
 }

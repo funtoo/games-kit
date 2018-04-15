@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
-inherit autotools eutils games
+EAPI=6
+inherit autotools desktop
 
 DESCRIPTION="Fly a plane around bomb/shoot the enemy. Port of Planegame from Amiga"
 HOMEPAGE="http://www.fishies.org.uk/apricots.html"
@@ -19,24 +19,28 @@ DEPEND="media-libs/libsdl[sound,video]
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-freealut.patch \
+	default
+
+	eapply "${FILESDIR}"/${P}-freealut.patch \
 		"${FILESDIR}"/${P}-ldflags.patch
 
 	cp admin/acinclude.m4.in acinclude.m4
 
 	sed -i \
-		-e 's:-DAP_PATH=\\\\\\"$prefix.*":-DAP_PATH=\\\\\\"${GAMES_DATADIR}/${PN}/\\\\\\"":' \
+		-e 's:-DAP_PATH=\\\\\\"$prefix.*":-DAP_PATH=\\\\\\"/usr/share/${PN}/\\\\\\"":' \
 		-e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' \
 		configure.in || die
 	sed -i \
-		-e "s:filename(AP_PATH):filename(\"${GAMES_SYSCONFDIR}/${PN}/\"):" \
+		-e "s:filename(AP_PATH):filename(\"/etc/${PN}/\"):" \
 		${PN}/init.cpp || die
 	sed -i \
-		-e "s:apricots.cfg:${GAMES_SYSCONFDIR}/${PN}/apricots.cfg:" \
+		-e "s:apricots.cfg:/etc/${PN}/apricots.cfg:" \
 		README apricots.html || die
 	sed -i \
 		-e 's/-Wmissing-prototypes//' \
 		acinclude.m4 || die
+
+	mv configure.in configure.ac || die
 	eautoreconf
 }
 
@@ -45,20 +49,15 @@ src_compile() {
 }
 
 src_install() {
-	dodoc AUTHORS README TODO ChangeLog
-	dohtml apricots.html
-	cd ${PN}
-	dogamesbin apricots
-	insinto "${GAMES_DATADIR}"/${PN}
-	doins *.wav *.psf *.shapes
-	insinto "${GAMES_SYSCONFDIR}"/${PN}
-	doins apricots.cfg
-	make_desktop_entry ${PN} Apricots
-	prepgamesdirs
-}
+	HTML_DOCS="apricots.html"
+	einstalldocs
 
-pkg_postinst() {
-	games_pkg_postinst
-	elog "You can change the game options by editing:"
-	elog "${GAMES_SYSCONFDIR}/${PN}/apricots.cfg"
+	cd ${PN}
+	dobin apricots
+	insinto /usr/share/${PN}
+	doins *.wav *.psf *.shapes
+	insinto /etc/${PN}
+	doins apricots.cfg
+
+	make_desktop_entry ${PN} Apricots
 }

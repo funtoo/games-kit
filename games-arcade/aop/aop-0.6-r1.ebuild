@@ -1,8 +1,7 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
-inherit eutils games
+EAPI=6
 
 DESCRIPTION="Ambassador of Pain is a curses based game with only 64 lines of code"
 HOMEPAGE="http://raffi.at/view/code/aop"
@@ -18,15 +17,16 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
+	default
 	sed -i \
 		-e "s#/usr/local/share#${GAMES_DATADIR}#" \
 		aop.c || die
-	epatch "${FILESDIR}"/${P}-as-needed.patch
+	eapply "${FILESDIR}"/${P}-as-needed.patch
 }
 
 src_install() {
-	dogamesbin aop
-	insinto "${GAMES_DATADIR}/${PN}"
+	dobin aop
+	insinto "/usr/shate/${PN}"
 	doins aop-level-*.txt
-	prepgamesdirs
+	einstalldocs
 }

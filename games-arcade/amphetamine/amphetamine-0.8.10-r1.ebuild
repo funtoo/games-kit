@@ -1,8 +1,8 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
-inherit eutils games
+EAPI=6
+inherit desktop
 
 DESCRIPTION="a cool Jump'n Run game offering some unique visual effects"
 HOMEPAGE="http://homepage.hispeed.ch/loehrer/amph/amph.html"
@@ -18,23 +18,31 @@ DEPEND="media-libs/libsdl[sound,video]
 	x11-libs/libXpm"
 RDEPEND=${DEPEND}
 
+PATCHES=(
+	"${FILESDIR}"/${P}-build.patch
+	"${FILESDIR}"/${P}-64bit.patch
+
+	# From Debian:
+	"${FILESDIR}"/${P}-no-lxt.patch
+	"${FILESDIR}"/${P}-bugs.patch
+	"${FILESDIR}"/${P}-missing-headers.patch
+	"${FILESDIR}"/${P}-newline.patch
+)
+
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${P}-build.patch \
-		"${FILESDIR}"/${P}-64bit.patch
+	default
 	sed -i -e '55d' src/ObjInfo.cpp || die
 }
 
 src_compile() {
-	emake INSTALL_DIR="${GAMES_DATADIR}"/${PN}
+	emake INSTALL_DIR=/usr/share/${PN}
 }
 
 src_install() {
-	newgamesbin amph ${PN}
-	insinto "${GAMES_DATADIR}"/${PN}
+	newbin amph ${PN}
+	insinto /usr/share/${PN}
 	doins -r ../amph/*
 	newicon amph.xpm ${PN}.xpm
 	make_desktop_entry ${PN} Amphetamine ${PN}
-	dodoc BUGS ChangeLog NEWS README
-	prepgamesdirs
+	einstalldocs
 }
