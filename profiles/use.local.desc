@@ -279,6 +279,7 @@ games-strategy/freeciv:server - Enable server support. Disabling this will also 
 games-strategy/freeciv:sound - Add support for sound provided by media-libs/sdl-mixer
 games-strategy/freeciv:system-lua - Use dev-lang/lua instead of the bundled liblua
 games-strategy/freesynd:devtools - Build development tools
+games-strategy/hedgewars:server - Enable local server
 games-strategy/heroes3:maps - Installs optional map data
 games-strategy/heroes3:music - Installs optional music data
 games-strategy/heroes3:sounds - Installs optional sound data
