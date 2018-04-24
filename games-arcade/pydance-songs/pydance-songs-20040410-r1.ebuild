@@ -1,8 +1,7 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
-inherit games
+EAPI=6
 
 DESCRIPTION="Music for the pyDDR game"
 HOMEPAGE="http://icculus.org/pyddr/"
@@ -13,10 +12,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-S=${WORKDIR}
+S="${WORKDIR}"
 
 src_install() {
-	insinto "${GAMES_DATADIR}/pydance/songs"
+	insinto "/usr/share/pydance/songs"
 	doins *
-	prepgamesdirs
 }

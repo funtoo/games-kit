@@ -1,8 +1,8 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
-inherit flag-o-matic eutils games
+EAPI=6
+inherit desktop flag-o-matic
 
 DESCRIPTION="A Boulderdash clone"
 HOMEPAGE="http://www.artsoft.org/rocksndiamonds/"
@@ -21,21 +21,25 @@ SRC_URI="http://www.artsoft.org/RELEASES/unix/rocksndiamonds/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="X sdl"
+IUSE=""
 
-RDEPEND="X? ( x11-libs/libX11 )
-	!sdl? ( x11-libs/libX11 )
-	sdl? (
-		>=media-libs/libsdl-1.2.3[joystick,video]
-		>=media-libs/sdl-mixer-1.2.4[mod,mp3,timidity]
-		media-libs/sdl-net
-		>=media-libs/sdl-image-1.2.2[gif]
-		media-libs/smpeg
-	)"
+RDEPEND="
+	media-libs/libsdl2[joystick,video]
+	media-libs/sdl2-mixer[mod,mp3,timidity]
+	media-libs/sdl2-net
+	media-libs/sdl2-image[gif]
+	media-libs/smpeg
+"
 DEPEND="${RDEPEND}
 	app-arch/unzip
-	X? ( x11-libs/libXt )
-	!sdl? ( x11-libs/libXt )"
+"
+
+PATCHES=(
+	# From Fedora:
+	"${FILESDIR}"/${PN}-4.1.0.0-YN.patch
+	"${FILESDIR}"/${PN}-4.1.0.0-music-info-url.patch
+	"${FILESDIR}"/${PN}-4.1.0.0-CVE-2011-4606.patch
+)
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -56,10 +60,7 @@ src_unpack() {
 }
 
 src_prepare() {
-	# make it parallel-friendly.
-	epatch \
-		"${FILESDIR}"/${P}-parallel-build.patch \
-		"${FILESDIR}"/${P}-perms.patch
+	default
 	sed -i \
 		-e 's:\$(MAKE_CMD):$(MAKE) -C $(SRC_DIR):' \
 		-e '/^MAKE/d' \
@@ -74,36 +75,17 @@ src_prepare() {
 src_compile() {
 	replace-cpu-flags k6 k6-1 k6-2 i586
 
-	local makeopts="RO_GAME_DIR=${GAMES_DATADIR}/${PN} RW_GAME_DIR=${GAMES_STATEDIR}/${PN}"
-	if use X || { ! use X && ! use sdl; } ; then
-		emake -j1 clean
-		emake ${makeopts} OPTIONS="${CFLAGS}" x11
-		mv rocksndiamonds{,.x11}
-	fi
-	if use sdl ; then
-		emake -j1 clean
-		emake ${makeopts} OPTIONS="${CFLAGS}" sdl
-		mv rocksndiamonds{,.sdl}
-	fi
+	local makeopts="RO_GAME_DIR=/usr/share/${PN} RW_GAME_DIR=/usr/share/${PN}"
+	emake -j1 clean
+	emake ${makeopts} OPTIONS="${CFLAGS}" sdl2
 }
 
 src_install() {
-	if use X || { ! use X && ! use sdl; } ; then
-		dogamesbin rocksndiamonds.x11
-	fi
-	if use sdl ; then
-		dogamesbin rocksndiamonds.sdl
-		dosym rocksndiamonds.sdl "${GAMES_BINDIR}/rocksndiamonds"
-	else
-		dosym rocksndiamonds.x11 "${GAMES_BINDIR}/rocksndiamonds"
-	fi
-	insinto "${GAMES_DATADIR}/${PN}"
+	dobin rocksndiamonds
+	insinto "/usr/share/${PN}"
 	doins -r docs graphics levels music sounds
 
-	newman rocksndiamonds.{1,6}
-	dodoc CREDITS ChangeLog README
-	newicon graphics/gfx_classic/rocks_icon_32x32.pcx ${PN}.pcx
-	make_desktop_entry rocksndiamonds "Rocks 'N' Diamonds" /usr/share/pixmaps/${PN}.pcx
-
-	prepgamesdirs
+	einstalldocs
+	newicon graphics/gfx_classic/RocksIcon32x32.png ${PN}.png
+	make_desktop_entry rocksndiamonds "Rocks 'N' Diamonds" /usr/share/pixmaps/${PN}.png
 }

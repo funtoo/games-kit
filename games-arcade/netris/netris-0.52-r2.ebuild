@@ -1,26 +1,31 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
-inherit eutils games
+EAPI=6
+inherit toolchain-funcs
 
-DEB_VER=9
-DESCRIPTION='Classic networked version of T*tris'
-HOMEPAGE='http://www.netris.org/'
+DEB_VER="9"
+DESCRIPTION="Classic networked version of T*tris"
+HOMEPAGE="http://www.netris.org/"
 SRC_URI="ftp://ftp.netris.org/pub/netris/${P}.tar.gz
 	mirror://debian/pool/main/n/netris/netris_${PV}-${DEB_VER}.diff.gz"
 
-LICENSE='GPL-2'
-SLOT=0
+LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~amd64 ~mips ~x86 ~x86-fbsd"
-IUSE=''
+IUSE=""
 
-DEPEND='sys-libs/ncurses:0='
-RDEPEND=${DEPEND}
+DEPEND="sys-libs/ncurses:0="
+RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${WORKDIR}"/netris_${PV}-${DEB_VER}.diff
-	epatch netris-0.52/debian/patches/[01]*
+	default
+
+	tc-export CC CXX LD AR RANLIB
+
+	eapply "${WORKDIR}"/netris_${PV}-${DEB_VER}.diff
+	eapply "${S}"/debian/patches/[01]*
+
 	# bug #185332
 	sed -i \
 		-e '/sys\/time/ i\
@@ -51,7 +56,6 @@ src_configure() {
 }
 
 src_install() {
-	dogamesbin netris sr
+	dobin netris sr
 	dodoc FAQ README robot_desc
-	prepgamesdirs
 }

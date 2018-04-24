@@ -1,8 +1,8 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
-inherit eutils gnome2-utils autotools games
+EAPI=6
+inherit autotools desktop gnome2-utils
 
 DESCRIPTION="Networked multiplayer-only Puzzle Bubble clone"
 HOMEPAGE="http://freshmeat.net/projects/pengupop"
@@ -18,7 +18,9 @@ DEPEND="media-libs/libsdl[sound,video]
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-underlink.patch
+	default
+
+	eapply "${FILESDIR}"/${P}-underlink.patch
 
 	sed -i \
 		-e '/Icon/s/\.png//' \
@@ -29,6 +31,7 @@ src_prepare() {
 	sed -i \
 		-e 's/-g -Wall -O2/-Wall/' \
 		Makefile.am || die
+
 	mv configure.in configure.ac || die
 	eautoreconf
 }
@@ -37,16 +40,13 @@ src_install() {
 	default
 	domenu pengupop.desktop
 	doicon -s 48 pengupop.png
-	prepgamesdirs
 }
 
 pkg_preinst() {
-	games_pkg_preinst
 	gnome2_icon_savelist
 }
 
 pkg_postinst() {
-	games_pkg_postinst
 	gnome2_icon_cache_update
 }
 

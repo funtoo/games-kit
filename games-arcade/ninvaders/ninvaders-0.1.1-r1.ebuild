@@ -1,8 +1,8 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
-inherit eutils toolchain-funcs games
+EAPI=6
+inherit toolchain-funcs
 
 DESCRIPTION="ASCII space invaders clone"
 HOMEPAGE="http://ninvaders.sourceforge.net/"
@@ -13,12 +13,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="sys-libs/ncurses:0"
-RDEPEND=${DEPEND}
+RDEPEND="sys-libs/ncurses:0="
+DEPEND="${RDEPEND}"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-compile.patch
-}
+PATCHES=( "${FILESDIR}"/${P}-compile.patch )
 
 src_compile() {
 	emake \
@@ -27,7 +25,6 @@ src_compile() {
 }
 
 src_install() {
-	newgamesbin nInvaders ninvaders
-	dodoc README
-	prepgamesdirs
+	newbin nInvaders ninvaders
+	einstalldocs
 }

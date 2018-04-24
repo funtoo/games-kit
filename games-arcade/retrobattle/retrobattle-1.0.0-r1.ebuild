@@ -1,8 +1,8 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
-inherit eutils games
+EAPI=6
+inherit eutils
 
 MY_P="${PN}-src-${PV}"
 DESCRIPTION="A NES-like platform arcade game"
@@ -19,22 +19,18 @@ RESTRICT="test"
 DEPEND="media-libs/libsdl[X,sound,video]
 	media-libs/sdl-mixer[wav]"
 RDEPEND="${DEPEND}"
-S=${WORKDIR}/${MY_P}/src
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-{build,sound,gcc6}.patch
-}
+S="${WORKDIR}/${MY_P}/src"
+
+PATCHES=( "${FILESDIR}"/${P}-{build,sound,gcc6}.patch )
 
 src_install() {
-	insinto "${GAMES_DATADIR}"/${PN}
+	insinto /usr/share/${PN}
 	doins -r "${WORKDIR}"/${MY_P}/data
 
-	# wrapper to pass datadir location
-	newgamesbin "${WORKDIR}"/${MY_P}/${PN} ${PN}.bin
-	games_make_wrapper ${PN} "${PN}.bin \"${GAMES_DATADIR}/${PN}\""
+	newbin "${WORKDIR}"/${MY_P}/${PN} ${PN}.bin
+	make_wrapper ${PN} "${PN}.bin \"/usr/share/${PN}\""
 
 	make_desktop_entry ${PN}
 	dodoc "${WORKDIR}"/${MY_P}/{manual.txt,README}
-
-	prepgamesdirs
 }

@@ -1,44 +1,50 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
 CMAKE_REMOVE_MODULES="yes"
 CMAKE_REMOVE_MODULES_LIST="FindALSA FindBoost FindFreetype FindGettext FindJpeg FindPng FindTiff FindZ"
-inherit eutils cmake-utils gnome2-utils games
 
-MY_PN=Performous
-MY_P=${MY_PN}-${PV}
-SONGS_PN=ultrastar-songs
+inherit desktop cmake-utils epatch gnome2-utils
+
+MY_PN="Performous"
+MY_P="${MY_PN}-${PV}"
+SONGS_PN="ultrastar-songs"
 
 DESCRIPTION="SingStar GPL clone"
 HOMEPAGE="https://performous.org/"
-SRC_URI="https://github.com/performous/performous/archive/${PV}.tar.gz -> ${P}.tar.gz
+SRC_URI="
+	https://github.com/performous/performous/archive/${PV}.tar.gz -> ${P}.tar.gz
 	songs? (
 		mirror://sourceforge/performous/${SONGS_PN}-restricted-3.zip
 		mirror://sourceforge/performous/${SONGS_PN}-jc-1.zip
 		mirror://sourceforge/performous/${SONGS_PN}-libre-3.zip
 		mirror://sourceforge/performous/${SONGS_PN}-shearer-1.zip
-	)"
+	)
+"
 
-LICENSE="GPL-2
+LICENSE="
+	GPL-2
 	songs? (
 		CC-BY-NC-SA-2.5
 		CC-BY-NC-ND-2.5
-	)"
+	)
+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="midi songs tools webcam"
 
-RDEPEND="dev-cpp/glibmm:2
+RDEPEND="
+	dev-cpp/glibmm:2
 	dev-cpp/libxmlpp:2.6
 	media-libs/portaudio
 	dev-libs/boost[threads(+)]
 	dev-libs/glib:2
-	dev-libs/libxml2
-	gnome-base/librsvg
-	media-gfx/imagemagick
+	dev-libs/libxml2:2
+	gnome-base/librsvg:2
+	media-gfx/imagemagick:0=
 	virtual/jpeg:0
-	media-libs/libpng:0
+	media-libs/libpng:0=
 	media-libs/libsdl2[joystick,video]
 	virtual/ffmpeg
 	virtual/opengl
@@ -50,10 +56,12 @@ RDEPEND="dev-cpp/glibmm:2
 	x11-libs/pango
 	media-libs/libepoxy
 	midi? ( media-libs/portmidi )
-	webcam? ( media-libs/opencv )"
+	webcam? ( media-libs/opencv )
+"
 DEPEND="${RDEPEND}
 	sys-apps/help2man
-	sys-devel/gettext"
+	sys-devel/gettext
+"
 
 src_prepare() {
 	cmake-utils_src_prepare
@@ -61,7 +69,7 @@ src_prepare() {
 		"${FILESDIR}"/${P}-gentoo.patch \
 		"${FILESDIR}"/${P}-linguas.patch
 	sed -i \
-		-e "s:@GENTOO_BINDIR@:${GAMES_BINDIR}:" \
+		-e "s:@GENTOO_BINDIR@:/usr/bin:" \
 		-e '/ Z /s/ Z/ ZLIB/g' \
 		-e 's/Z_FOUND/ZLIB_FOUND/g' \
 		-e 's/Z_LIBRARIES/ZLIB_LIBRARIES/g' \
@@ -78,7 +86,7 @@ src_configure() {
 		$(cmake-utils_use_enable webcam WEBCAM)
 		$(cmake-utils_use_enable midi MIDI)
 		-DCMAKE_VERBOSE_MAKEFILE=TRUE
-		-DSHARE_INSTALL="${GAMES_DATADIR}"/${PN}
+		-DSHARE_INSTALL="/usr/share/${PN}"
 	)
 	cmake-utils_src_configure
 }
@@ -90,21 +98,18 @@ src_compile() {
 src_install() {
 	cmake-utils_src_install
 	if use songs ; then
-		insinto "${GAMES_DATADIR}"/${PN}
+		insinto "/usr/share/${PN}"
 		doins -r "${WORKDIR}/songs"
 	fi
 	dodoc docs/{Authors,instruments}.txt
 	newicon -s scalable data/themes/default/icon.svg ${PN}.svg
-	prepgamesdirs
 }
 
 pkg_preinst() {
-	games_pkg_preinst
 	gnome2_icon_savelist
 }
 
 pkg_postinst() {
-	games_pkg_postinst
 	gnome2_icon_cache_update
 }
 

@@ -1,8 +1,8 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
-inherit eutils games
+EAPI=6
+inherit desktop
 
 DESCRIPTION="A clone of the classic Missile Command game"
 HOMEPAGE="http://www.linux-games.com/penguin-command/"
@@ -22,5 +22,4 @@ src_install() {
 	default
 	newicon data/gfx/icon.xpm ${PN}.xpm
 	make_desktop_entry ${PN} "Penguin Command" ${PN}
-	prepgamesdirs
 }

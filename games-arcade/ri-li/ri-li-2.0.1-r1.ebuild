@@ -1,8 +1,8 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
-inherit autotools eutils games
+EAPI=6
+inherit autotools desktop
 
 DESCRIPTION="Drive a toy wood engine and collect all the coaches"
 HOMEPAGE="http://ri-li.sourceforge.net/"
@@ -16,10 +16,12 @@ IUSE=""
 DEPEND="media-libs/libsdl[sound,video]
 	media-libs/sdl-mixer[mod]"
 RDEPEND="${DEPEND}"
-S=${WORKDIR}/Ri-li-${PV}
+
+S="${WORKDIR}/Ri-li-${PV}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc43.patch
+	default
+	eapply "${FILESDIR}"/${P}-gcc43.patch
 	mv configure.{in,ac}
 	rm aclocal.m4
 	eautoreconf
@@ -27,8 +29,7 @@ src_prepare() {
 
 src_install() {
 	default
-	rm -f "${D}${GAMES_DATADIR}/Ri-li/"*ebuild
+	rm -f "${ED}/usr/share/Ri-li/"*ebuild
 	newicon data/Ri-li-icon-48x48.png ${PN}.png
 	make_desktop_entry Ri_li Ri-li
-	prepgamesdirs
 }
