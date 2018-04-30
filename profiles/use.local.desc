@@ -9,11 +9,6 @@ games-action/d1x-rebirth:l10n_de - Provides German translations for the game's b
 games-action/d1x-rebirth:music - Support for ingame music
 games-action/d1x-rebirth:opl3-musicpack - Include alternate version of the game's music, recorded with the Yamaha YMF262 OPL3 soundchip
 games-action/d1x-rebirth:sc55-musicpack - Include alternate version of the game's music, recorded with the Roland Sound Canvas SC-55 MIDI module
-games-action/d2x-rebirth:demo - Install games-action/descent2-demodata as well
-games-action/d2x-rebirth:l10n_de - Provides German translations for the game's briefings, robot descriptions, and outro of the original campaign
-games-action/d2x-rebirth:music - Support for ingame music
-games-action/d2x-rebirth:opl3-musicpack - Include alternate version of the game's music, recorded with the Yamaha YMF262 OPL3 soundchip
-games-action/d2x-rebirth:sc55-musicpack - Include alternate version of the game's music, recorded with the Roland Sound Canvas SC-55 MIDI module
 games-action/dxx-rebirth:data - Install data files
 games-action/dxx-rebirth:descent1 - Install Descent 1 resources and executable
 games-action/dxx-rebirth:descent2 - Install Descent 2 resources and executable
@@ -114,9 +109,6 @@ games-emulation/pcsxr:cdio - Use libcdio for CD support
 games-emulation/pcsxr:sdl - Use SDL sound backend (other parts of SDL are used unconditionally)
 games-emulation/ppsspp:headless - Build headless version of the PPSSPP
 games-emulation/ppsspp:system-ffmpeg - Use the system-wide media-video/ffmpeg instead of bundled
-games-emulation/sdlmame:arcade - Enable the Multiple Arcade Machine Emulator for arcade games support
-games-emulation/sdlmame:mess - Enable the Multi Emulator Super System for game system support
-games-emulation/sdlmame:tools - Build development tools shared between sdlmame and sdlmess
 games-emulation/snes9x:netplay - Enable playing ROMs over the network (not recommended)
 games-emulation/snes9x:xrandr - Enable support for the X xrandr extension
 games-emulation/vbam:link - Enable GBA linking functionality
@@ -147,11 +139,10 @@ games-fps/doom3:roe - Adds support for the Resurrection of Evil expansion
 games-fps/doomsday:demo - Install launcher dor doom1.wad from games-fps/doom-data
 games-fps/doomsday:doom - Install launcher for jdoom game
 games-fps/doomsday:fluidsynth - Build the FluidSynth sound driver
+games-fps/doomsday:fmod - Enable support for fmod music and sound effects lib
 games-fps/doomsday:freedoom - Install launcher for doom1.wad from games-fps/freedoom
 games-fps/doomsday:heretic - Install launcher for jheretic game
 games-fps/doomsday:hexen - Install launcher for jhexen game
-games-fps/doomsday:resources - Enable support for games-fps/doomsday-resources in jdoom launcher
-games-fps/doomsday:snowberry - Install Snowberry doomsday front-end
 games-fps/doomsday:tools - Build additional tools such as doomsday-shell, md2tool and texc
 games-fps/duke3d:demo - Install the demo files
 games-fps/duke3d:pic - disable optimized assembly code that is not PIC friendly
