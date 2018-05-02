@@ -12,6 +12,7 @@ games-engines/gemrb python_single_target_python2_7
 games-kids/childsplay python_single_target_python2_7
 games-kids/gcompris python_single_target_python2_7
 games-kids/tuxmathscrabble python_single_target_python2_7
+games-puzzle/4stattack python_single_target_python2_7
 games-puzzle/angrydd python_single_target_python2_7
 games-puzzle/hexamine python_single_target_python2_7
 games-puzzle/jools python_single_target_python2_7
