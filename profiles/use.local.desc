@@ -33,8 +33,7 @@ games-action/supertuxkart:wiimote - Support for wiimote input devices
 games-action/swordandsworcery:bundled-libs - Use the upstream provided bundled libraries.
 games-action/trine:launcher - Install GTK+ launcher
 games-action/trine-enchanted-edition:launcher - Install GTK+ launcher
-games-action/trine2:bundled-libs - Use bundled libraries.
-games-action/trine2:launcher - Install gtk+ launcher
+games-action/trine2:launcher - Install GTK+ launcher
 games-action/voxelands:audio - Enables audio support
 games-action/voxelands:client - Builds the rich client
 games-action/voxelands:server - Builds the dedicated server
