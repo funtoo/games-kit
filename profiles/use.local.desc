@@ -115,6 +115,7 @@ games-emulation/vbam:link - Enable GBA linking functionality
 games-emulation/yabause:pic - disable optimized assembly code that is not PIC friendly
 games-emulation/zsnes:debug - Enable the builtin debugger
 games-emulation/zsnes:pax_kernel - Triggers a paxmarking of the binary
+games-engines/exult:sdl2 - Use libsdl2 instead of libsdl
 games-engines/frobtads:tads2compiler - Build TADS2 compiler
 games-engines/frobtads:tads3compiler - Build TADS3 compiler
 games-engines/odamex:master - Build master server target (advertises odamex server list)
