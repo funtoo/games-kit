@@ -146,8 +146,6 @@ games-fps/doomsday:freedoom - Install launcher for doom1.wad from games-fps/free
 games-fps/doomsday:heretic - Install launcher for jheretic game
 games-fps/doomsday:hexen - Install launcher for jhexen game
 games-fps/doomsday:tools - Build additional tools such as doomsday-shell, md2tool and texc
-games-fps/duke3d:demo - Install the demo files
-games-fps/duke3d:pic - disable optimized assembly code that is not PIC friendly
 games-fps/duke3d-data:gog - Extract the data from the GOG.com installer.
 games-fps/eduke32:demo - Install the Duke Nukem 3D demo files, provided by games-fps/duke3d-demodata.
 games-fps/eduke32:fluidsynth - Install media-libs/sdl2-mixer with fluidsynth support.
@@ -162,9 +160,6 @@ games-fps/eduke32:tools - Install the support tools for mapster32.
 games-fps/eduke32:voxels - Install the Duke Nukem 3D Voxels Pack.
 games-fps/eduke32:vpx - Enable support for media-libs/libvpx.
 games-fps/eduke32:xmp - Enable support for media-libs/exempi.
-games-fps/lsdldoom:freedoom - Install games-fps/freedoom wad file
-games-fps/lsdldoom:net - Enables network game support
-games-fps/lsdldoom:shareware - Install games-fps/doom-data for shareware wad file
 games-fps/nexuiz:maps - Install the community map pack
 games-fps/quake2-icculus:demo - Install the demo files (quake2-demodata) and configure for use
 games-fps/quake2-icculus:qmax - Build the pretty version (quake max)
