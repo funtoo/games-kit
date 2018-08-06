@@ -1,12 +1,11 @@
-# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 inherit desktop gnome2-utils
 
 DESCRIPTION="Stella Atari 2600 VCS Emulator"
-HOMEPAGE="http://stella.sourceforge.net/"
-SRC_URI="mirror://sourceforge/stella/${P}-src.tar.xz"
+HOMEPAGE="https://stella-emu.github.io/"
+SRC_URI="https://github.com/stella-emu/stella/releases/download/${PV}/${P}-src.tar.xz"
 
 LICENSE="GPL-2+ BSD"
 SLOT="0"
