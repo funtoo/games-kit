@@ -3,7 +3,7 @@
 
 EAPI=6
 PYTHON_COMPAT=( python2_7 )
-inherit toolchain-funcs cmake-utils python-single-r1
+inherit cmake-utils python-single-r1 readme.gentoo-r1
 
 DESCRIPTION="Atari ST emulator"
 HOMEPAGE="http://hatari.tuxfamily.org/"
@@ -16,7 +16,7 @@ IUSE="+sdl2"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${PYTHON_DEPS}
-	games-emulation/caps
+	>=dev-libs/spsdeclib-5.1-r1
 	sdl2? ( media-libs/libsdl2[X,sound,video] )
 	!sdl2? ( media-libs/libsdl[X,sound,video] )
 	media-libs/portaudio
@@ -40,6 +40,7 @@ The first time you run hatari, you should configure it to find the
 TOS you prefer to use.  Be sure to save your settings.
 "
 
+PATCHES=( "${FILESDIR}/${P}_caps5_files.patch" )
 DOCS="readme.txt doc/*.txt"
 HTML_DOCS="doc/"
 
@@ -55,6 +56,7 @@ src_configure() {
 	mycmakeargs=(
 		"-DDOCDIR=/usr/share/doc/${PF}"
 		"-DENABLE_SDL2=$(usex sdl2)"
+		"-DENABLE_CAPSIMAGE5=ON"
 		)
 	cmake-utils_src_configure
 }
@@ -62,6 +64,7 @@ src_configure() {
 src_install() {
 	cmake-utils_src_install
 	python_fix_shebang "${ED%/}"/usr/share/hatari/{hatariui,hconsole}/
+	readme.gentoo_create_doc
 }
 
 pkg_postinst() {
