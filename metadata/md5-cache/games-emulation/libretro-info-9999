@@ -1,0 +1,9 @@
+DEFINED_PHASES=compile install unpack
+DEPEND=>=dev-vcs/git-1.8.2.1
+DESCRIPTION=Libretro info files required for libretro cores
+EAPI=7
+HOMEPAGE=https://github.com/libretro/libretro-super
+LICENSE=GPL-3
+SLOT=0
+_eclasses_=git-r3	18aed4252aebae08e3db185e684ee37c
+_md5_=c4ce5b6321123a48f6f4fe3397b06416
