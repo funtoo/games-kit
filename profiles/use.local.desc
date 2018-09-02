@@ -237,6 +237,7 @@ games-rpg/manaplus:pugixml - Use dev-libs/pugixml for XML parsing isntead of dev
 games-rpg/manaplus:sdl2 - Use libsdl2 instead of libsdl
 games-rpg/sumwars:tools - Builds editor tools
 games-rpg/to-the-moon:bundled-libs - Use bundled libraries
+games-simulation/corsix-th:midi - Adds support for background MIDI music via SDL_mixer
 games-simulation/flightgear:dbus - Enable screensaver DBus interaction
 games-simulation/flightgear:gdal - Enable alternative terrain engine based on pagedLOD using sci-libs/gdal
 games-simulation/flightgear:qt5 - Build Qt5 launcher application
