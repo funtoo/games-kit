@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst unpack
+DEPEND=media-libs/libsdl2[X,sound,video] dev-libs/libzip dev-libs/libxml2 >=media-libs/freetype-2:2 >=media-libs/libvorbis-1.2.1 >=media-libs/libpng-1.2:0= virtual/glu virtual/opengl dev-lang/lua:0 mixer? ( media-libs/sdl2-mixer ) openal? ( media-libs/openal ) virtual/pkgconfig >=sys-apps/sed-4
+DESCRIPTION=A 2D space trading and combat game, in a similar vein to Escape Velocity
+EAPI=6
+HOMEPAGE=http://blog.naev.org/
+IUSE=debug +mixer +openal
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 GPL-3 public-domain CC-BY-3.0 CC-BY-SA-3.0
+RDEPEND=media-libs/libsdl2[X,sound,video] dev-libs/libzip dev-libs/libxml2 >=media-libs/freetype-2:2 >=media-libs/libvorbis-1.2.1 >=media-libs/libpng-1.2:0= virtual/glu virtual/opengl dev-lang/lua:0 mixer? ( media-libs/sdl2-mixer ) openal? ( media-libs/openal )
+SLOT=0
+SRC_URI=mirror://sourceforge/naev/naev-0.6.1.tar.bz2 mirror://sourceforge/naev/ndata-0.6.1.zip
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	flag-o-matic	55aaa148741116aa54ad0d80e361818e	gnome2-utils	c6060f4ab634aca444c4b2176b0f3877	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	xdg-utils	89bb9f083a2590d9b447fd0b78a96186
+_md5_=1ff2273c1a031ca4b9b322c90f33b256

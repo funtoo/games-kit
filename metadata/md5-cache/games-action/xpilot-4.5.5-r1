@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=x11-libs/libX11 x11-libs/libXext app-text/rman x11-base/xorg-proto x11-misc/gccmakedep x11-misc/imake
+DESCRIPTION=A multi-player 2D client/server space game
+EAPI=6
+HOMEPAGE=http://www.xpilot.org/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=x11-libs/libX11 x11-libs/libXext
+SLOT=0
+SRC_URI=mirror://sourceforge/xpilotgame/xpilot-4.5.5.tar.bz2
+_eclasses_=desktop	2ccd1dd1dd7bfb8795eea024a4f91bb6	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_md5_=dda49348b6b8e0d66bb65a0c03884e3a

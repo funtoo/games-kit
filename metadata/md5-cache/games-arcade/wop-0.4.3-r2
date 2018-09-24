@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install
+DEPEND=media-libs/libsdl media-libs/sdl-image media-libs/sdl-mixer media-libs/sdl-net media-libs/sdl-ttf x11-misc/makedepend
+DESCRIPTION=Worms of Prey - A multi-player, real-time clone of Worms
+EAPI=6
+HOMEPAGE=http://wormsofprey.org/
+KEYWORDS=~amd64 ~x86 ~x86-fbsd
+LICENSE=GPL-2
+RDEPEND=media-libs/libsdl media-libs/sdl-image media-libs/sdl-mixer media-libs/sdl-net media-libs/sdl-ttf
+SLOT=0
+SRC_URI=http://wormsofprey.org/download/wop-0.4.3-src.tar.bz2 http://wormsofprey.org/download/wopdata-2005-12-21.tar.bz2
+_eclasses_=desktop	2ccd1dd1dd7bfb8795eea024a4f91bb6	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_md5_=1fb0572a4c1de5bae02d43e0ddc685d4

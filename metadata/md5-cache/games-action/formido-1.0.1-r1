@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare unpack
+DEPEND=media-libs/libsdl[sound,video] media-libs/sdl-image media-libs/sdl-mixer
+DESCRIPTION=A shooting game in the spirit of Phobia games
+EAPI=6
+HOMEPAGE=http://www.mhgames.org/oldies/formido/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=media-libs/libsdl[sound,video] media-libs/sdl-image media-libs/sdl-mixer
+SLOT=0
+SRC_URI=http://noe.falzon.free.fr/prog/formido-1.0.1.tar.gz http://koti.mbnet.fi/lsoft/formido/formido-music.tar.bz2
+_eclasses_=desktop	2ccd1dd1dd7bfb8795eea024a4f91bb6	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_md5_=32cb7d56e15cd54da1b2ff6c9c70bb7b

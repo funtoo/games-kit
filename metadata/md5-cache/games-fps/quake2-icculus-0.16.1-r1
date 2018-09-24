@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
+DEPEND=aalib? ( media-libs/aalib ) alsa? ( media-libs/alsa-lib ) opengl? ( virtual/opengl ) sdl? ( media-libs/libsdl[sound,joystick?,video] ) X? ( x11-libs/libXxf86dga x11-libs/libXxf86vm ) X? ( x11-base/xorg-proto ) rogue? ( || ( sys-freebsd/freebsd-ubin app-arch/sharutils ) ) xatrix? ( || ( sys-freebsd/freebsd-ubin app-arch/sharutils ) )
+DESCRIPTION=The icculus.org Linux port of iD's Quake 2 engine
+EAPI=5
+HOMEPAGE=http://icculus.org/quake2/
+IUSE=aalib alsa cdinstall dedicated demo ipv6 joystick opengl qmax rogue sdl X xatrix
+KEYWORDS=~amd64 ~x86 ~x86-fbsd
+LICENSE=GPL-2
+RDEPEND=aalib? ( media-libs/aalib ) alsa? ( media-libs/alsa-lib ) opengl? ( virtual/opengl ) sdl? ( media-libs/libsdl[sound,joystick?,video] ) X? ( x11-libs/libXxf86dga x11-libs/libXxf86vm ) cdinstall? ( games-fps/quake2-data ) demo? ( games-fps/quake2-demodata ) games-misc/games-envd
+SLOT=0
+SRC_URI=http://icculus.org/quake2/files/quake2-r0.16.1.tar.gz qmax? ( http://icculus.org/quake2/files/maxpak.pak ) rogue? ( mirror://idsoftware/quake2/source/roguesrc320.shar.Z ) xatrix? ( mirror://idsoftware/quake2/source/xatrixsrc320.shar.Z )
+_eclasses_=base	2ec5c64f5de125f0c65a927c4c128fef	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	games	be6b136152d095d3e15031e2c725eb3f	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	user	8bc2845510e2109af75e3eeac607ec81
+_md5_=b62c0dd88de38ab8fc508d94030e5242
