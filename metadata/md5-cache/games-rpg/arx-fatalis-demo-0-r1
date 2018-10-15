@@ -1,0 +1,13 @@
+DEFINED_PHASES=install nofetch unpack
+DEPEND=app-arch/cabextract app-arch/unzip
+DESCRIPTION=Arx Fatalis demo
+EAPI=7
+HOMEPAGE=https://www.arkane-studios.com/uk/arx.php
+KEYWORDS=~amd64 ~x86
+LICENSE=ArxFatalisDemo
+RDEPEND=games-rpg/arx-libertatis
+RESTRICT=fetch
+SLOT=0
+SRC_URI=arx_demo_english.zip
+_eclasses_=desktop	2ccd1dd1dd7bfb8795eea024a4f91bb6
+_md5_=c17c2e97869693dc7aace5233643b790
