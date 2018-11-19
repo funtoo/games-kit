@@ -1,5 +1,5 @@
 DEFINED_PHASES=install nofetch postinst prepare unpack
-DEPEND=cdinstall? ( app-arch/unzip ) !cdinstall? ( app-arch/innoextract )
+DEPEND=cdinstall? ( app-arch/unzip ) !cdinstall? ( app-arch/innoextract ) >=app-portage/elt-patches-20170317
 DESCRIPTION=Data files for Descent 1
 EAPI=6
 HOMEPAGE=http://www.interplay.com/games/descent.php
@@ -11,5 +11,5 @@ RDEPEND=!games-action/descent1-demodata
 RESTRICT=bindist !cdinstall? ( fetch )
 SLOT=0
 SRC_URI=cdinstall? ( http://www.dxx-rebirth.com/download/dxx/misc/descent-game-content-10to14a-patch.zip ) !cdinstall? ( setup_descent_1.4a_(16596).exe )
-_eclasses_=cdrom	c64e4c5e9cbf2a58be31431e015a6210	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	portability	2b88d3ecc35035a3b8ab628b49cafb0e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_eclasses_=cdrom	c64e4c5e9cbf2a58be31431e015a6210	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	e99babeaa7d98c1caaa6a61a79902210	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	portability	2b88d3ecc35035a3b8ab628b49cafb0e	toolchain-funcs	fa43c370cf1e0d4ada6e123b775a35b7
 _md5_=2ce4387a2b1ba1c86b0d44793d1ddc14
