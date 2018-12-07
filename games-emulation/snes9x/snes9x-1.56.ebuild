@@ -1,4 +1,3 @@
-# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -23,7 +22,7 @@ RDEPEND="
 	gtk? (
 		dev-libs/glib:2
 		dev-libs/libxml2
-		>=x11-libs/gtk+-3.0:3
+		>=x11-libs/gtk+-3.22
 		x11-libs/libXrandr
 		x11-misc/xdg-utils
 		alsa? ( media-libs/alsa-lib )
