@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst setup test
+DEPEND=dev-libs/boost:= dev-libs/icu:= dev-libs/libsodium dev-libs/libxml2 dev-libs/nspr ~games-strategy/0ad-data-0.0.23b_alpha media-libs/libpng:0 media-libs/libsdl2[X,opengl,video] media-libs/libvorbis media-libs/openal net-libs/enet:1.3 net-libs/miniupnpc:= net-misc/curl sys-libs/zlib virtual/jpeg:0 virtual/opengl x11-libs/libX11 x11-libs/libXcursor editor? ( x11-libs/wxGTK:3.0[X,opengl] ) lobby? ( >=net-libs/gloox-1.0.20 ) nvtt? ( media-gfx/nvidia-texture-tools ) || ( >=dev-lang/python-2.7.5-r2:2.7[threads,ssl] ) virtual/pkgconfig test? ( dev-lang/perl ) >=app-portage/elt-patches-20170317 >=sys-apps/sed-4
+DESCRIPTION=A free, real-time strategy game
+EAPI=6
+HOMEPAGE=https://play0ad.com/
+IUSE=editor +lobby nvtt pch test
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 LGPL-2.1 MIT CC-BY-SA-3.0 ZLIB
+RDEPEND=dev-libs/boost:= dev-libs/icu:= dev-libs/libsodium dev-libs/libxml2 dev-libs/nspr ~games-strategy/0ad-data-0.0.23b_alpha media-libs/libpng:0 media-libs/libsdl2[X,opengl,video] media-libs/libvorbis media-libs/openal net-libs/enet:1.3 net-libs/miniupnpc:= net-misc/curl sys-libs/zlib virtual/jpeg:0 virtual/opengl x11-libs/libX11 x11-libs/libXcursor editor? ( x11-libs/wxGTK:3.0[X,opengl] ) lobby? ( >=net-libs/gloox-1.0.20 ) nvtt? ( media-gfx/nvidia-texture-tools )
+RESTRICT=test
+SLOT=0
+SRC_URI=http://releases.wildfiregames.com/0ad-0.0.23b-alpha-unix-build.tar.xz
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	e99babeaa7d98c1caaa6a61a79902210	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	flag-o-matic	02908f00f002f0f07c5b74783d778325	gnome2-utils	22ebae0b986793be079d9d93fa16a8ea	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	python-any-r1	3b48a54b2b31a6bc928e459fec3adb54	python-utils-r1	b5fdfa15cbe2f6299a482bf5d0c5925d	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	wxwidgets	c13f16b67f5a1378ff9ac6dcf57fc9b1	xdg-utils	9ef13b5c5bcf0c50d6aa53692d8e441c
+_md5_=c34c2b066be882f7d78a8fc7de972f42
