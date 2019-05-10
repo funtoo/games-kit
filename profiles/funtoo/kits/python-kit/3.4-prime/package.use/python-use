@@ -1,4 +1,5 @@
 games-arcade/bub-n-bros python_single_target_python2_7
+games-arcade/commandergenius python_single_target_python3_5 python_targets_python3_5
 games-arcade/diameter python_single_target_python2_7
 games-arcade/funnyboat python_single_target_python2_7
 games-arcade/triplexinvaders python_single_target_python2_7
@@ -11,6 +12,7 @@ games-emulation/hatari python_single_target_python2_7
 games-engines/gemrb python_single_target_python2_7
 games-kids/childsplay python_single_target_python2_7
 games-kids/tuxmathscrabble python_single_target_python2_7
+games-misc/ponysay python_single_target_python3_5 python_targets_python3_5
 games-puzzle/4stattack python_single_target_python2_7
 games-puzzle/angrydd python_single_target_python2_7
 games-puzzle/hexamine python_single_target_python2_7
