@@ -19,11 +19,12 @@ games-action/dxx-rebirth:sc55-musicpack - Include alternate version of the game'
 games-action/dxx-rebirth:textures - Include high resolution (640x480) backgrounds, briefing images and fonts (Descent 1)
 games-action/hotline-miami:bundled-libs - Use bundled libraries.
 games-action/hotline-miami:launcher - Install qt launcher
+games-action/minetest:client - Build Minetest client
 games-action/minetest:jsoncpp - Enable using a system-wide JSONCPP
 games-action/minetest:leveldb - Enable LevelDB backend
 games-action/minetest:postgres - Optionally use PostgreSQL as map backend
 games-action/minetest:redis - Enable redis backend via dev-libs/hiredis
-games-action/minetest:server - Build minetest server
+games-action/minetest:server - Build Minetest server
 games-action/minetest:spatial - Enable SpatialIndex AreaStore backend
 games-action/solar2:bundled-libs - Use the upstream provided bundled libraries.
 games-action/supermariowar:server - Compile and install Super Mario War server files
@@ -141,7 +142,6 @@ games-fps/darkplaces:cdsound - Enables using CD audio in the engine
 games-fps/darkplaces:demo - Uses the demo data from quake1 (quake1-demodata)
 games-fps/darkplaces:lights - Install and setup the updated light maps
 games-fps/darkplaces:textures - Install and setup the updated textures
-games-fps/doom-data:doomsday - Add wrapper to run it within doomsday
 games-fps/doom3:dedicated - install only as a dedicated game server
 games-fps/doom3:roe - Adds support for the Resurrection of Evil expansion
 games-fps/doomsday:demo - Install launcher dor doom1.wad from games-fps/doom-data
@@ -166,6 +166,7 @@ games-fps/eduke32:tools - Install the support tools for mapster32.
 games-fps/eduke32:voxels - Install the Duke Nukem 3D Voxels Pack.
 games-fps/eduke32:vpx - Enable support for media-libs/libvpx.
 games-fps/eduke32:xmp - Enable support for media-libs/exempi.
+games-fps/gzdoom:gtk2 - Enable support for GTK+2 instead of GTK+3
 games-fps/nexuiz:maps - Install the community map pack
 games-fps/quake2-icculus:demo - Install the demo files (quake2-demodata) and configure for use
 games-fps/quake2-icculus:qmax - Build the pretty version (quake max)
