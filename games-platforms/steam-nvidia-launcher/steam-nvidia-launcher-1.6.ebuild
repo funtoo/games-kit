@@ -11,12 +11,13 @@ KEYWORDS="amd64"
 
 GITHUB_REPO="steam-launcher"
 GITHUB_USER="funtoo"
-GITHUB_TAG="a5e1634"
+GITHUB_TAG="1ca1c45ca9392f962ecb37875acf1131737e3e87"
 SRC_URI="https://www.github.com/${GITHUB_USER}/${GITHUB_REPO}/tarball/${GITHUB_TAG} -> ${PN}-${GITHUB_TAG}.tar.gz"
 
 RDEPEND="
 	app-emulation/nvidia-docker
-	app-emulation/nvidia-container-runtime"
+	app-emulation/nvidia-container-runtime
+	x11-apps/xhost"
 
 src_unpack() {
 	unpack ${A}
