@@ -1,34 +1,28 @@
-# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-MULTILIB_COMPAT=( abi_x86_{32,64} )
-
-inherit meson multilib-minimal ninja-utils user
+inherit meson ninja-utils user
 
 DESCRIPTION="Optimise Linux system performance on demand"
 HOMEPAGE="https://github.com/FeralInteractive/gamemode"
 
-if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="https://github.com/FeralInteractive/gamemode.git"
-	GAMEMODE_GIT_PTR="master"
-	inherit git-r3
-else
-	GAMEMODE_GIT_PTR="${PV}"
-	SRC_URI="https://github.com/FeralInteractive/gamemode/releases/download/${GAMEMODE_GIT_PTR}/${P}.tar.xz"
-	KEYWORDS="~amd64 ~x86"
-fi
+GAMEMODE_GIT_PTR="${PV}"
+SRC_URI="https://github.com/FeralInteractive/gamemode/releases/download/${GAMEMODE_GIT_PTR}/${P}.tar.xz"
+KEYWORDS="*"
 
 LICENSE="BSD"
 SLOT="0"
 IUSE=""
 
 RDEPEND="
-	>=sys-apps/systemd-236[${MULTILIB_USEDEP}]
+	sys-auth/elogind
 	sys-auth/polkit
+	dev-libs/inih
 "
 DEPEND="${RDEPEND}"
+
+PATCHES=("${FILESDIR}/pull-228-elogind-support.patch")
 
 pkg_pretend() {
 	elog
@@ -63,29 +57,20 @@ pkg_pretend() {
 	elog
 }
 
-multilib_src_configure() {
-	local myconf=()
-	if ! multilib_is_native_abi; then
-		myconf+=(
-			-Dwith-examples=false
-			-Dwith-daemon=false
-		)
-	fi
-	meson_src_configure "${myconf[@]}"
+src_configure() {
+	local emesonargs=(
+		-Dwith-sd-bus-provider="elogind"
+	)
+
+	meson_src_configure
 }
 
-multilib_src_compile() {
-	eninja
+src_compile() {
+	meson_src_compile
 }
 
-multilib_src_install() {
-	DESTDIR="${D}" eninja install
-	if multilib_is_native_abi; then
-		insinto /etc/security/limits.d
-		newins - 45-gamemode.conf <<-EOF
-			@gamemode - nice -10
-		EOF
-	fi
+src_install() {
+	meson_src_install
 }
 
 pkg_postinst() {
@@ -97,8 +82,9 @@ pkg_postinst() {
 	elog "# gpasswd -a USER gamemode  # with USER = your user name"
 	elog
 
-	elog "Enable and start the daemon in your systemd user instance, then add"
-	elog "LD_PRELOAD=\$LD_PRELOAD:/usr/\$LIB/libgamemodeauto.so %command%"
+	elog "Enable and start the daemon in your systemd user instance,"
+	elog "or simply run 'gamemoded -d' if using OpenRC, then add"
+	elog "gamemoderun %command%"
 	elog "to the start options of any steam game to enable the performance"
 	elog "governor as you start the game."
 	elog
