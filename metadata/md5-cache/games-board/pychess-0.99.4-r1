@@ -1,4 +1,4 @@
-BDEPEND=python_targets_python3_7? ( dev-lang/python:3.7[sqlite] ) >=dev-lang/python-exec-2:=[python_targets_python3_7(-)?,-python_single_target_python3_7(-)]
+BDEPEND=python_targets_python3_7? ( dev-lang/python:3.7[sqlite] ) >=dev-lang/python-exec-2:=[python_targets_python3_7(-)?,-python_single_target_python3_7(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_7(-)?,-python_single_target_python3_7(-)]
 DEFINED_PHASES=compile configure install postinst postrm prepare test
 DEPEND=dev-python/pexpect[python_targets_python3_7(-)?,-python_single_target_python3_7(-)] dev-python/psutil[python_targets_python3_7(-)?,-python_single_target_python3_7(-)] dev-python/pycairo[python_targets_python3_7(-)?,-python_single_target_python3_7(-)] dev-python/pygobject:3[python_targets_python3_7(-)?,-python_single_target_python3_7(-)] dev-python/sqlalchemy[python_targets_python3_7(-)?,-python_single_target_python3_7(-),sqlite] gnome-base/librsvg:2 x11-libs/gtksourceview:3.0 x11-libs/pango x11-themes/adwaita-icon-theme gstreamer? ( dev-python/gst-python:1.0[python_targets_python3_7(-)?,-python_single_target_python3_7(-)] media-libs/gstreamer:1.0 media-libs/gst-plugins-base:1.0 )
 DESCRIPTION=A chess client for Gnome
@@ -11,5 +11,5 @@ RDEPEND=dev-python/pexpect[python_targets_python3_7(-)?,-python_single_target_py
 REQUIRED_USE=|| ( python_targets_python3_7 )
 SLOT=0
 SRC_URI=https://github.com/pychess/pychess/releases/download/0.99.4/pychess-0.99.4.tar.gz
-_eclasses_=distutils-r1	1a001b95d3bfb24277ebc93f461847da	multibuild	40fe59465edacd730c644ec2bc197809	multilib	1d91b03d42ab6308b5f4f6b598ed110e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-r1	6ae4f9eb4881e5c5489344ee122e05d0	python-utils-r1	8914c9c220fed51dbc06d700c5ce75bc	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529	xdg-utils	14d00d009167652b1fa363e55effe213
+_eclasses_=distutils-r1	eb92d1a6d9057e2422cc9610f79f919c	multibuild	b2c915190b051f55a23b9354b9849847	multilib	1d91b03d42ab6308b5f4f6b598ed110e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-r1	5bbb250a8d0b8f4496dcef8e8c1c1a8a	python-utils-r1	263e4bbfa6a84be6dc6272a6702aedca	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529	xdg-utils	14d00d009167652b1fa363e55effe213
 _md5_=f2fb05d2d2112229c22054c13928cfa2
