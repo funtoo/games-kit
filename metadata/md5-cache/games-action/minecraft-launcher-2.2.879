@@ -9,4 +9,4 @@ RESTRICT=bindist mirror
 SLOT=2
 SRC_URI=https://launcher.mojang.com/download/linux/x86_64/minecraft-launcher_2.2.879.tar.gz
 _eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	14d00d009167652b1fa363e55effe213
-_md5_=64310d68ce5af289119dd6b31910dba5
+_md5_=5109f4b9d02eb6fbad41b0ef57462bef
