@@ -52,10 +52,21 @@ QA_PRESTRIPPED="
 src_install() {
 	dodir /opt/${PN}
 	insinto /opt/${PN}/
-	patchelf --set-rpath /opt/minecraft-launcher minecraft-launcher liblauncher.so
+	patchelf --set-rpath '$ORIGIN' libcef.so liblauncher.so "${PN}"
 	doins -r .
 	fperms +x /opt/${PN}/${PN}
 	dosym ../${PN}/${PN} /opt/bin/${PN}
 	doicon -s scalable "${FILESDIR}/${PN}.svg"
 	make_desktop_entry ${PN} "Minecraft" ${PN} Game
+}
+
+pkg_postinst() {
+	xdg_icon_cache_update
+	einfo "This package has installed the Java Minecraft launcher."
+	einfo "To actually play the game, you need to purchase an account at:"
+	einfo "    ${HOMEPAGE}"
+}
+
+pkg_postrm() {
+	xdg_icon_cache_update
 }
