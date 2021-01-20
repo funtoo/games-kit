@@ -1,0 +1,8 @@
+DEFINED_PHASES=postinst
+DESCRIPTION=Funtoo's Docker-based Steam environment for NVIDIA systems (deprecated).
+EAPI=7
+HOMEPAGE=https://www.funtoo.org/Steam
+KEYWORDS=*
+LICENSE=GPL-2+
+SLOT=0
+_md5_=63ec4758661981e67c2a78d0d4b26b3e
