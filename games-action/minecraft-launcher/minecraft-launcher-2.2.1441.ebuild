@@ -6,7 +6,7 @@ inherit desktop xdg
 
 DESCRIPTION="An open-world game whose gameplay revolves around breaking and placing blocks"
 HOMEPAGE="https://www.minecraft.net/"
-SRC_URI="https://launcher.mojang.com/download/linux/x86_64/minecraft-launcher_2.2.1262.tar.gz"
+SRC_URI="https://launcher.mojang.com/download/linux/x86_64/minecraft-launcher_2.2.1441.tar.gz"
 
 KEYWORDS="amd64"
 LICENSE="Mojang"
