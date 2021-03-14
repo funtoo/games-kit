@@ -6,7 +6,7 @@ inherit desktop xdg
 
 DESCRIPTION="An open-world game whose gameplay revolves around breaking and placing blocks"
 HOMEPAGE="https://www.minecraft.net/"
-SRC_URI="https://launcher.mojang.com/download/linux/x86_64/minecraft-launcher_2.2.2012.tar.gz"
+SRC_URI="https://launcher.mojang.com/v1/objects/08f44133c9f5ef8131600a705e9553ccb5d62fd9/minecraft-launcher -> minecraft-launcher-915"
 
 KEYWORDS="amd64"
 LICENSE="Mojang"
@@ -14,7 +14,6 @@ SLOT="2"
 
 RESTRICT="bindist mirror"
 
-DEPEND="dev-util/patchelf"
 RDEPEND="
 	>=x11-libs/gtk+-2.24.32-r1[X]
 	dev-libs/nss
@@ -41,21 +40,16 @@ RDEPEND="
 	x11-libs/xcb-util
 "
 
-S="${WORKDIR}/${PN}"
+S="${WORKDIR}"
 
-QA_PRESTRIPPED="
-	/opt/minecraft-launcher/libcef.so
-	/opt/minecraft-launcher/liblauncher.so
-	/opt/minecraft-launcher/minecraft-launcher
+QA_PREBUILT="
+	/opt/bin/${PN}
 "
 
 src_install() {
-	dodir /opt/${PN}
-	insinto /opt/${PN}/
-	patchelf --set-rpath '$ORIGIN' libcef.so liblauncher.so "${PN}"
-	doins -r .
-	fperms +x /opt/${PN}/${PN}
-	dosym ../${PN}/${PN} /opt/bin/${PN}
+	dodir /opt
+	into /opt
+	newbin ${DISTDIR}/${P} ${PN}
 	doicon -s scalable "${FILESDIR}/${PN}.svg"
 	make_desktop_entry ${PN} "Minecraft" ${PN} Game
 }
