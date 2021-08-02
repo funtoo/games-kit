@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=media-libs/libsdl media-libs/sdl-image media-libs/sdl-mixer media-libs/sdl-net media-libs/sdl-ttf
 SLOT=0
 SRC_URI=http://wormsofprey.org/download/wop-0.4.3-src.tar.bz2 http://wormsofprey.org/download/wopdata-2005-12-21.tar.bz2
-_eclasses_=desktop	2ccd1dd1dd7bfb8795eea024a4f91bb6	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
 _md5_=1fb0572a4c1de5bae02d43e0ddc685d4
