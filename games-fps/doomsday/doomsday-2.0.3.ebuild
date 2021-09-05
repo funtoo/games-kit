@@ -24,7 +24,7 @@ RDEPEND="
 	dev-qt/qtopengl:5
 	dev-qt/qtwidgets:5
 	dev-qt/qtx11extras:5
-	dev-qt/qtgui:5[-gles2]
+	dev-qt/qtgui:5[-gles2-only]
 	dev-qt/qtcore:5
 	net-misc/curl
 	sys-libs/zlib
