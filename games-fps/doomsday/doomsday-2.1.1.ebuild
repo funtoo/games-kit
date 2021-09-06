@@ -1,9 +1,8 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-PYTHON_COMPAT=( python2_7 python3_{6,7} )
+PYTHON_COMPAT=( python2_7 python3+ )
 
 inherit cmake-utils python-any-r1 readme.gentoo-r1
 
@@ -12,12 +11,12 @@ HOMEPAGE="https://www.dengine.net"
 SRC_URI="https://downloads.sourceforge.net/project/deng/Doomsday%20Engine/${PV}/${P}.tar.gz"
 LICENSE="GPL-3+ LGPL-3+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="*"
 IUSE="demo fmod freedoom fluidsynth openal tools"
 
 RDEPEND="
 	dev-qt/qtcore:5=
-	dev-qt/qtgui:5=[-gles2]
+	dev-qt/qtgui:5=[-gles2-only]
 	dev-qt/qtnetwork:5=
 	dev-qt/qtopengl:5=
 	dev-qt/qtwidgets:5=
