@@ -7,7 +7,7 @@ inherit cmake flag-o-matic
 
 DESCRIPTION="A game similar to Super Mario Bros."
 HOMEPAGE="https://supertux.org/"
-SRC_URI="https://github.com/SuperTux/supertux/releases/download/v0.6.2/SuperTux-v0.6.2-Source.tar.gz -> supertux-0.6.2.tar.gz"
+SRC_URI="https://github.com/SuperTux/supertux/tarball/c1ddb4f28c54de77f07aa9965231a91c0ed06708 -> supertux-0.6.3-c1ddb4f.tar.gz"
 
 LICENSE="GPL-2+ GPL-3+ ZLIB MIT CC-BY-SA-2.0 CC-BY-SA-3.0"
 SLOT="0"
@@ -34,7 +34,9 @@ BDEPEND="
 "
 
 post_src_unpack() {
-	mv ${WORKDIR}/SuperTux-v0.6.2-Source ${S} || die
+	if [ ! -d "${S}" ]; then
+		mv "${WORKDIR}"/SuperTux-supertux* "${S}" || die
+	fi
 }
 
 src_prepare() {
