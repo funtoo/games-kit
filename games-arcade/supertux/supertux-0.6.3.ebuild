@@ -34,9 +34,7 @@ BDEPEND="
 "
 
 post_src_unpack() {
-	if [ ! -d "${S}" ]; then
-		mv "${WORKDIR}"/SuperTux-supertux* "${S}" || die
-	fi
+	mv "${WORKDIR}"/SuperTux* "${S}" || die
 }
 
 src_prepare() {
