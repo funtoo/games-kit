@@ -8,6 +8,6 @@ LICENSE=Mojang
 RDEPEND=>=x11-libs/gtk+-2.24.32-r1[X] dev-libs/nss dev-libs/libbsd dev-libs/libffi dev-libs/libpcre media-libs/alsa-lib media-libs/openal net-libs/gnutls[idn] net-print/cups sys-apps/dbus virtual/jre:1.8 virtual/opengl x11-apps/xrandr x11-libs/libXScrnSaver x11-libs/libXcomposite x11-libs/libXcursor x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes x11-libs/libXi x11-libs/libXrender x11-libs/libXtst x11-libs/xcb-util
 RESTRICT=bindist mirror
 SLOT=2
-SRC_URI=https://launcher.mojang.com/v1/objects/ce9e6169550628003e22de8086e9fe1186c2285e/minecraft-launcher -> minecraft-launcher-1035
+SRC_URI=https://launcher.mojang.com/v1/objects/4af97da7d848aeaee181e8de35a5cbabccc218c0/minecraft-launcher -> minecraft-launcher-1093
 _eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	14d00d009167652b1fa363e55effe213
-_md5_=e68718a059ae124ae791193c5ca9e627
+_md5_=9cb4271d4d2cec4c9017448ddd05cfe7
