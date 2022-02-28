@@ -5,7 +5,7 @@ EAPI=7
 : ${CMAKE_MAKEFILE_GENERATOR:=emake}
 inherit cmake flag-o-matic
 
-DESCRIPTION="A game similar to Super Mario Bros."
+DESCRIPTION="SuperTux source code"
 HOMEPAGE="https://supertux.org/"
 SRC_URI="https://github.com/SuperTux/supertux/releases/download/v0.6.3/SuperTux-v0.6.3-Source.tar.gz -> SuperTux-v0.6.3-Source.tar.gz"
 
