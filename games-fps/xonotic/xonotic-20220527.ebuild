@@ -9,7 +9,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Fork of Nexuiz, Deathmatch FPS based on DarkPlaces, an advanced Quake 1 engine"
 HOMEPAGE="https://www.xonotic.org/"
-SRC_URI="https://beta.xonotic.org/autobuild/Xonotic-20220526.zip"
+SRC_URI="https://beta.xonotic.org/autobuild/Xonotic-20220527.zip"
 
 LICENSE="GPL-2+"
 SLOT="0"
