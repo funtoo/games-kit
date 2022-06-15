@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
-DEPEND=>=dev-lang/lua-5.1:0 media-libs/libsdl[joystick,video] media-libs/libvorbis virtual/opengl dev-libs/expat media-libs/smpeg media-libs/sdl-image[jpeg,png] media-libs/sdl-gfx virtual/pkgconfig dev-util/scons[python_targets_python2_7]
+DEPEND=>=dev-lang/lua-5.1:0 media-libs/libsdl[joystick,video] media-libs/libvorbis virtual/opengl dev-libs/expat media-libs/smpeg media-libs/sdl-image[jpeg,png] media-libs/sdl-gfx virtual/pkgconfig dev-util/scons[python_targets_python2_7] sys-apps/shadow
 DESCRIPTION=Fast 2D tank arcade game with multiplayer and split-screen modes
 EAPI=5
 HOMEPAGE=http://btanks.sourceforge.net/
@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-lang/lua-5.1:0 media-libs/libsdl[joystick,video] media-libs/libvorbis virtual/opengl dev-libs/expat media-libs/smpeg media-libs/sdl-image[jpeg,png] media-libs/sdl-gfx games-misc/games-envd
 SLOT=0
 SRC_URI=mirror://sourceforge/btanks/btanks-0.9.8083.tar.bz2
-_eclasses_=base	2ec5c64f5de125f0c65a927c4c128fef	desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	a1bf4756dba418a7238f3be0cb010c54	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	games	be6b136152d095d3e15031e2c725eb3f	ltprune	22f9f14d105434e9c400ccac3bbb64ae	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	preserve-libs	ef207dc62baddfddfd39a164d9797648	scons-utils	741000d14c0b59263aac3f3cf6e39909	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	e68863263b1e8611dacf381bec5c8b2b	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
+_eclasses_=base	2ec5c64f5de125f0c65a927c4c128fef	desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	a1bf4756dba418a7238f3be0cb010c54	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	games	be6b136152d095d3e15031e2c725eb3f	ltprune	22f9f14d105434e9c400ccac3bbb64ae	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	preserve-libs	ef207dc62baddfddfd39a164d9797648	scons-utils	741000d14c0b59263aac3f3cf6e39909	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
 _md5_=0be0face3b53169c6094bc47fb7f3e87
