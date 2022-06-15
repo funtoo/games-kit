@@ -1,5 +1,5 @@
 DEFINED_PHASES=install prepare setup
-DEPEND=dev-games/KXL >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=dev-games/KXL >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 sys-apps/shadow
 DESCRIPTION=2D length scroll shooting game
 EAPI=6
 HOMEPAGE=http://triring.net/ps2linux/games/kxl/kxlgames.html
@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-games/KXL media-fonts/font-adobe-100dpi
 SLOT=0
 SRC_URI=mirror://gentoo/geki2-KXL-2.0.3.tar.gz mirror://gentoo/geki2-KXL.png
-_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	desktop	b1d22ac8bdd4679ab79c71aca235009d	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	e68863263b1e8611dacf381bec5c8b2b
+_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	desktop	b1d22ac8bdd4679ab79c71aca235009d	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7
 _md5_=55eaddf80d3b90788f1bf3f0d7105974
