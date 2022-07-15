@@ -5,9 +5,9 @@ EAPI=7
 HOMEPAGE=https://www.minecraft.net/
 KEYWORDS=amd64
 LICENSE=Mojang
-RDEPEND=>=x11-libs/gtk+-2.24.32-r1[X] dev-libs/nss dev-libs/libbsd dev-libs/libffi dev-libs/libpcre media-libs/alsa-lib media-libs/openal net-libs/gnutls[idn] net-print/cups sys-apps/dbus virtual/jre:1.8 virtual/opengl x11-apps/xrandr x11-libs/libXScrnSaver x11-libs/libXcomposite x11-libs/libXcursor x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes x11-libs/libXi x11-libs/libXrender x11-libs/libXtst x11-libs/xcb-util
+RDEPEND=>=x11-libs/gtk+-2.24.32-r1[X] dev-libs/nss dev-libs/libbsd dev-libs/libffi dev-libs/libpcre media-libs/alsa-lib media-libs/openal net-libs/gnutls[idn] net-print/cups sys-apps/dbus virtual/opengl x11-apps/xrandr x11-libs/libXScrnSaver x11-libs/libXcomposite x11-libs/libXcursor x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes x11-libs/libXi x11-libs/libXrender x11-libs/libXtst x11-libs/xcb-util
 RESTRICT=bindist
 SLOT=2
 SRC_URI=https://launcher.mojang.com/v1/objects/4392471202bb9dff482db8a5551a7643da955ace/minecraft-launcher -> minecraft-launcher-1.0.1221
 _eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	14d00d009167652b1fa363e55effe213
-_md5_=6a13ec8e3f462560bc98870cfd588603
+_md5_=098d865cf9045a956b02d67c2f4bfd76
