@@ -1,12 +1,12 @@
 DEFINED_PHASES=configure install setup
-DEPEND=python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] ) >=games-rpg/adonthell-0.3.5-r2[python_targets_python2_7(-)?,-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-),-python_single_target_python3_10(-)] nls? ( virtual/libintl ) nls? ( sys-devel/gettext )
+DEPEND=python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] ) >=games-rpg/adonthell-0.3.5-r2[python_targets_python2_7(-)?,-python_single_target_python3_10(-),-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-)] nls? ( virtual/libintl ) nls? ( sys-devel/gettext )
 DESCRIPTION=role playing game to showcase the adonthell engine
 EAPI=6
 HOMEPAGE=http://adonthell.nongnu.org/download/
 IUSE=nls python_single_target_python2_7 python_targets_python2_7
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] ) >=games-rpg/adonthell-0.3.5-r2[python_targets_python2_7(-)?,-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-),-python_single_target_python3_10(-)] nls? ( virtual/libintl )
+RDEPEND=python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] ) >=games-rpg/adonthell-0.3.5-r2[python_targets_python2_7(-)?,-python_single_target_python3_10(-),-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-)] nls? ( virtual/libintl )
 REQUIRED_USE=^^ ( python_single_target_python2_7 )
 RESTRICT=userpriv
 SLOT=0

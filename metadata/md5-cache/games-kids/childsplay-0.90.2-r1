@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
-DEPEND=python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] ) dev-python/pygame[python_targets_python2_7(-)?,-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-),-python_single_target_python3_10(-)] media-libs/sdl-image[gif,jpeg,png] media-libs/sdl-ttf media-libs/sdl-mixer[vorbis] media-libs/libogg sys-apps/shadow
+DEPEND=python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] ) dev-python/pygame[python_targets_python2_7(-)?,-python_single_target_python3_10(-),-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-)] media-libs/sdl-image[gif,jpeg,png] media-libs/sdl-ttf media-libs/sdl-mixer[vorbis] media-libs/libogg sys-apps/shadow
 DESCRIPTION=A suite of educational games for young children
 EAPI=5
 HOMEPAGE=http://childsplay.sourceforge.net/
 IUSE=python_single_target_python2_7 python_targets_python2_7
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
-RDEPEND=python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] ) dev-python/pygame[python_targets_python2_7(-)?,-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-),-python_single_target_python3_10(-)] media-libs/sdl-image[gif,jpeg,png] media-libs/sdl-ttf media-libs/sdl-mixer[vorbis] media-libs/libogg games-misc/games-envd
+RDEPEND=python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] ) dev-python/pygame[python_targets_python2_7(-)?,-python_single_target_python3_10(-),-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-)] media-libs/sdl-image[gif,jpeg,png] media-libs/sdl-ttf media-libs/sdl-mixer[vorbis] media-libs/libogg games-misc/games-envd
 REQUIRED_USE=^^ ( python_single_target_python2_7 )
 SLOT=0
 SRC_URI=mirror://sourceforge/childsplay/childsplay-0.90.2.tgz mirror://sourceforge/childsplay/childsplay_plugins-0.90.tgz mirror://sourceforge/childsplay/childsplay_plugins_lfc-0.90.tgz
