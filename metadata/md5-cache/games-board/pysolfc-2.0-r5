@@ -6,7 +6,7 @@ HOMEPAGE=http://pysolfc.sourceforge.net/
 IUSE=extra-cardsets minimal +sound python_single_target_python2_7 python_targets_python2_7
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
-RDEPEND=!minimal? ( dev-python/pillow[tk,python_targets_python2_7(-)?,-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-),-python_single_target_python3_10(-)] dev-tcltk/tktable ) sound? ( dev-python/pygame[python_targets_python2_7(-)?,-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-),-python_single_target_python3_10(-)] ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[tk] >=dev-lang/python-exec-2:=[python_targets_python2_7] )
+RDEPEND=!minimal? ( dev-python/pillow[tk,python_targets_python2_7(-)?,-python_single_target_python3_10(-),-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-)] dev-tcltk/tktable ) sound? ( dev-python/pygame[python_targets_python2_7(-)?,-python_single_target_python3_10(-),-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-)] ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[tk] >=dev-lang/python-exec-2:=[python_targets_python2_7] )
 REQUIRED_USE=^^ ( python_single_target_python2_7 )
 SLOT=0
 SRC_URI=mirror://sourceforge/pysolfc/PySolFC-2.0.tar.bz2 extra-cardsets? ( mirror://sourceforge/pysolfc/PySolFC-Cardsets-2.0.tar.bz2 )
