@@ -8,10 +8,11 @@ MY_PV=${PV//.}
 DESCRIPTION="The ultimate old-school single player dungeon exploration game"
 HOMEPAGE="https://www.nethack.org/"
 SRC_URI="https://nethack.org/download/${PV}/nethack-${MY_PV}-src.tgz"
+S="${WORKDIR}/NetHack-NetHack-${PV}_Released"
 
 LICENSE="nethack"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="*"
 IUSE="X"
 
 RDEPEND="sys-libs/ncurses:0=
@@ -30,10 +31,11 @@ BDEPEND="virtual/pkgconfig
 	)"
 
 src_prepare() {
-	eapply "${FILESDIR}/${P}-recover.patch"
+	eapply "${FILESDIR}/${PN}-3.6.1-recover.patch"
 	eapply_user
 
-	cp "${FILESDIR}/${PN}-3.6.0-hint-$(usex X x11 tty)" hint || die "Failed to copy hint file"
+	ewarn this package is EXPERIMENTAL.  Currently fails to compile with USE="X"
+	cp "sys/unix/hints/linux$(usex X -x11 '' )" hint || die "Failed to copy hint file"
 	sys/unix/setup.sh hint || die "Failed to run setup.sh"
 }
 
