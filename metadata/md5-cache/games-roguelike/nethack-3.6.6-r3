@@ -1,14 +1,13 @@
-BDEPEND=virtual/pkgconfig X? ( x11-apps/bdftopcf x11-apps/mkfontdir )
+BDEPEND=virtual/pkgconfig
 DEFINED_PHASES=compile install postinst preinst prepare
-DEPEND=sys-libs/ncurses:0= X? ( x11-libs/libXaw x11-libs/libXpm x11-libs/libXt ) X? ( x11-base/xorg-proto ) sys-apps/shadow
+DEPEND=sys-libs/ncurses:0= sys-apps/shadow
 DESCRIPTION=The ultimate old-school single player dungeon exploration game
 EAPI=7
 HOMEPAGE=https://www.nethack.org/
-IUSE=X
 KEYWORDS=*
 LICENSE=nethack
-RDEPEND=sys-libs/ncurses:0= X? ( x11-libs/libXaw x11-libs/libXpm x11-libs/libXt )
+RDEPEND=sys-libs/ncurses:0=
 SLOT=0
 SRC_URI=https://nethack.org/download/3.6.6/nethack-366-src.tgz
 _eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7
-_md5_=e85199c75f294b30954ac5049a1c8e6c
+_md5_=fcf5e4dd9c859d544475ca83bf73d95f
