@@ -6,7 +6,7 @@ inherit desktop xdg
 
 DESCRIPTION="An open-world game whose gameplay revolves around breaking and placing blocks"
 HOMEPAGE="https://www.minecraft.net/"
-SRC_URI="https://launcher.mojang.com/v1/objects/4392471202bb9dff482db8a5551a7643da955ace/minecraft-launcher -> minecraft-launcher-1.0.1221"
+SRC_URI="https://piston-data.mojang.com/v1/objects/4392471202bb9dff482db8a5551a7643da955ace/minecraft-launcher -> minecraft-launcher-1.0.1221"
 
 KEYWORDS="amd64"
 LICENSE="Mojang"
