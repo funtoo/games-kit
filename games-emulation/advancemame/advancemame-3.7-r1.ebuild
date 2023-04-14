@@ -1,4 +1,3 @@
-# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -44,6 +43,7 @@ PATCHES=(
 
 src_prepare() {
 	default
+	append-cflags -fcommon
 	eautoreconf
 
 	sed -i -e 's/"-s"//' configure || die
