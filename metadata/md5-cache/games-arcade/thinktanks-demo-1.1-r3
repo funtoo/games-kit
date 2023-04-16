@@ -8,5 +8,5 @@ RDEPEND=media-libs/libsdl[video,joystick,abi_x86_32(-)] media-libs/libogg[abi_x8
 RESTRICT=strip
 SLOT=0
 SRC_URI=ftp://ggdev-1.homelan.com/thinktanks/ThinkTanksDemo_v1.1.sh.bin
-_eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	unpacker	1cae8d330d7e2eb64488d3a858fdee0b
+_eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	unpacker	cbd6624f820a4289653f5dcb999bea7a
 _md5_=72494249f263f835f73c50334e10ecf7
