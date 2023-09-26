@@ -6,7 +6,7 @@ inherit desktop pax-utils xdg
 
 DESCRIPTION="Real-time chess analysis GUI"
 HOMEPAGE="https://github.com/fohristiwhirl/nibbler"
-SRC_URI="https://github.com/fohristiwhirl/nibbler/releases/download/v2.4.0/nibbler-2.4.0-linux.zip -> nibbler-2.4.0-linux.zip"
+SRC_URI="https://github.com/fohristiwhirl/nibbler/releases/download/v2.4.1/nibbler-2.4.1-linux.zip -> nibbler-2.4.1-linux.zip"
 LICENSE="GPL-3"
 SLOT="0"
 
