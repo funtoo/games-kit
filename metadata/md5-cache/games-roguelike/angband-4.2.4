@@ -1,4 +1,4 @@
-BDEPEND=dev-python/docutils virtual/pkgconfig >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+BDEPEND=dev-python/docutils virtual/pkgconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
 DEFINED_PHASES=configure install postinst postrm prepare
 DEPEND=X? ( media-fonts/font-misc-misc x11-libs/libX11 ) ncurses? ( sys-libs/ncurses:0 ) sdl? ( media-libs/libsdl2[video,X] media-libs/sdl2-image media-libs/sdl2-ttf sound? ( media-libs/libsdl2[sound] media-libs/sdl2-mixer[mp3] ) )
 DESCRIPTION=A roguelike dungeon exploration game based on the books of J.R.R. Tolkien
@@ -11,5 +11,5 @@ RDEPEND=X? ( media-fonts/font-misc-misc x11-libs/libX11 ) ncurses? ( sys-libs/nc
 REQUIRED_USE=sound? ( sdl ) || ( X ncurses )
 SLOT=0
 SRC_URI=https://github.com/angband/angband/archive/refs/tags/4.2.4.tar.gz -> angband-4.2.4.tar.gz https://rephial.org/downloads/4.2/angband-4.2.4.tar.gz https://dev.gentoo.org/~steils/distfiles/angband-4.2.4-man.tar.gz
-_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	desktop	b1d22ac8bdd4679ab79c71aca235009d	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	desktop	b1d22ac8bdd4679ab79c71aca235009d	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
 _md5_=318fdbf9121a945eac006105629341cd

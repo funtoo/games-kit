@@ -1,4 +1,4 @@
-BDEPEND=virtual/pkgconfig x11-base/xorg-proto nls? ( sys-devel/gettext ) >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+BDEPEND=virtual/pkgconfig x11-base/xorg-proto nls? ( sys-devel/gettext ) >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
 DEFINED_PHASES=configure install postinst postrm preinst prepare
 DEPEND=dev-libs/glib:2 gnome-base/librsvg:2 virtual/libintl x11-libs/cairo[X] x11-libs/libXpm default-font? ( media-fonts/font-adobe-100dpi[nls?] media-fonts/font-misc-misc[nls?] ) !gtk? ( x11-libs/libX11 x11-libs/libXt x11-libs/libXmu Xaw3d? ( x11-libs/libXaw3d ) !Xaw3d? ( x11-libs/libXaw ) ) gtk? ( x11-libs/gtk+:2 ) dev-util/desktop-file-utils x11-misc/shared-mime-info
 DESCRIPTION=GUI for gnuchess and for internet chess servers
@@ -11,5 +11,5 @@ RDEPEND=dev-libs/glib:2 gnome-base/librsvg:2 virtual/libintl x11-libs/cairo[X] x
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://gnu/xboard/xboard-4.9.1.tar.gz
-_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	14d00d009167652b1fa363e55effe213
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	14d00d009167652b1fa363e55effe213
 _md5_=b7a3f358865d6db5aed06354a0412b91

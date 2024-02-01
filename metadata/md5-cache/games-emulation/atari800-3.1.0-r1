@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare
-DEPEND=sdl? ( >=media-libs/libsdl-1.2.0[opengl?,sound?,video] ) ncurses? ( sys-libs/ncurses:0= sound? ( !oss? ( media-libs/libsdl[sound] ) ) ) !sdl? ( !ncurses? ( sys-libs/ncurses:0= sound? ( !oss? ( media-libs/libsdl[sound] ) ) ) ) readline? ( sys-libs/readline:0= sys-libs/ncurses:0= ) media-libs/libpng:0= sys-libs/zlib app-arch/unzip >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=sdl? ( >=media-libs/libsdl-1.2.0[opengl?,sound?,video] ) ncurses? ( sys-libs/ncurses:0= sound? ( !oss? ( media-libs/libsdl[sound] ) ) ) !sdl? ( !ncurses? ( sys-libs/ncurses:0= sound? ( !oss? ( media-libs/libsdl[sound] ) ) ) ) readline? ( sys-libs/readline:0= sys-libs/ncurses:0= ) media-libs/libpng:0= sys-libs/zlib app-arch/unzip >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
 DESCRIPTION=Atari 800 emulator
 EAPI=6
 HOMEPAGE=https://atari800.github.io/
@@ -9,5 +9,5 @@ LICENSE=GPL-2+
 RDEPEND=sdl? ( >=media-libs/libsdl-1.2.0[opengl?,sound?,video] ) ncurses? ( sys-libs/ncurses:0= sound? ( !oss? ( media-libs/libsdl[sound] ) ) ) !sdl? ( !ncurses? ( sys-libs/ncurses:0= sound? ( !oss? ( media-libs/libsdl[sound] ) ) ) ) readline? ( sys-libs/readline:0= sys-libs/ncurses:0= ) media-libs/libpng:0= sys-libs/zlib
 SLOT=0
 SRC_URI=https://sourceforge.net/projects/atari800/files/atari800/3.1.0/atari800-3.1.0.tar.gz https://sourceforge.net/projects/atari800/files/ROM/Original%20XL%20ROM/xf25.zip
-_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	desktop	b1d22ac8bdd4679ab79c71aca235009d	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	desktop	b1d22ac8bdd4679ab79c71aca235009d	eqawarn	bb3d80ca38bc542ed397ab65f64256a6	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
 _md5_=caf60f2b03d7b6053bf4b9d8d3350f94

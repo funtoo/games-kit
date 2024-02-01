@@ -1,0 +1,10 @@
+BDEPEND=games-util/deutex
+DEFINED_PHASES=install postinst
+DESCRIPTION=Game resources for FreeDM
+EAPI=7
+HOMEPAGE=https://freedoom.github.io
+KEYWORDS=*
+LICENSE=BSD
+SLOT=0
+SRC_URI=https://github.com/freedoom/freedoom/tarball/8cecc3642861dfb71839984c886d5576fa120d49 -> freedoom-0.13.0-8cecc36.tar.gz
+_md5_=03d4dd4c87aa51c2ac9e97f4722412e1

@@ -1,0 +1,11 @@
+DEFINED_PHASES=install postinst
+DEPEND=dev-libs/libpcre net-libs/gnutls sys-libs/readline:0 sys-libs/zlib
+DESCRIPTION=(T)he k(I)cki(N) (T)ickin d(I)kumud clie(N)t
+EAPI=7
+HOMEPAGE=https://tintin.mudhalla.net
+KEYWORDS=*
+LICENSE=GPL-3+
+RDEPEND=dev-libs/libpcre net-libs/gnutls sys-libs/readline:0 sys-libs/zlib
+SLOT=0
+SRC_URI=https://github.com/scandum/tintin/tarball/84ca426c77b31f53539f09b409562fcde4e6d2b2 -> tintin-2.02.41-84ca426.tar.gz
+_md5_=6609cd1f6c23831f0914aa94bb43c1c9

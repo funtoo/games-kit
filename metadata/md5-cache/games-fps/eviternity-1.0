@@ -1,0 +1,9 @@
+DEFINED_PHASES=install postinst
+DESCRIPTION=Eviternity is a megawad comprised of six 5-map episodes (called Chapters) plus two secret maps, created as a 25th birthday gift to Doom.
+EAPI=7
+HOMEPAGE=https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/eviternity
+KEYWORDS=*
+LICENSE=freedist
+SLOT=0
+SRC_URI=https://youfailit.net/pub/idgames/levels/doom2/Ports/megawads/eviternity.zip -> eviternity.zip
+_md5_=a92ecc38b61d0adf7b90cc5ba51396ab

@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install postinst prepare
-DEPEND=dev-libs/glib:2= media-libs/libsdl:0=[joystick] sys-libs/zlib:0= x11-libs/gtk+:3= x11-libs/libX11:0= x11-libs/libXext:0= x11-libs/libXtst:0= x11-libs/libXv:0= alsa? ( media-libs/alsa-lib:0= ) cdio? ( dev-libs/libcdio:0= ) ffmpeg? ( !libav? ( >=media-video/ffmpeg-3:0= ) libav? ( media-video/libav:0= ) ) nls? ( virtual/libintl:0= ) openal? ( media-libs/openal:0= ) opengl? ( virtual/opengl:0= x11-libs/libXxf86vm:0= ) pulseaudio? ( media-sound/pulseaudio:0= ) sdl? ( media-libs/libsdl:0=[sound] ) app-arch/unzip dev-util/intltool x11-base/xorg-proto nls? ( sys-devel/gettext:0 ) x86? ( dev-lang/nasm ) >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=dev-libs/glib:2= media-libs/libsdl:0=[joystick] sys-libs/zlib:0= x11-libs/gtk+:3= x11-libs/libX11:0= x11-libs/libXext:0= x11-libs/libXtst:0= x11-libs/libXv:0= alsa? ( media-libs/alsa-lib:0= ) cdio? ( dev-libs/libcdio:0= ) ffmpeg? ( !libav? ( >=media-video/ffmpeg-3:0= ) libav? ( media-video/libav:0= ) ) nls? ( virtual/libintl:0= ) openal? ( media-libs/openal:0= ) opengl? ( virtual/opengl:0= x11-libs/libXxf86vm:0= ) pulseaudio? ( media-sound/pulseaudio:0= ) sdl? ( media-libs/libsdl:0=[sound] ) app-arch/unzip dev-util/intltool x11-base/xorg-proto nls? ( sys-devel/gettext:0 ) x86? ( dev-lang/nasm ) >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
 DESCRIPTION=PCSX-Reloaded: a fork of PCSX, the discontinued Playstation emulator
 EAPI=6
 HOMEPAGE=http://pcsxr.codeplex.com
@@ -11,5 +11,5 @@ REQUIRED_USE=?? ( alsa openal oss pulseaudio sdl )
 RESTRICT=test
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~mgorny/dist/pcsxr-1.9.94.zip
-_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	estack	43ddf5aaffa7a8d0482df54d25a66a1f	libtool	f143db5a74ccd9ca28c1234deffede96	ltprune	22f9f14d105434e9c400ccac3bbb64ae	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	versionator	2352c3fc97241f6a02042773c8287748
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	eqawarn	bb3d80ca38bc542ed397ab65f64256a6	estack	43ddf5aaffa7a8d0482df54d25a66a1f	libtool	f143db5a74ccd9ca28c1234deffede96	ltprune	22f9f14d105434e9c400ccac3bbb64ae	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	versionator	2352c3fc97241f6a02042773c8287748
 _md5_=0f423103e1fffbfd1680e6f7462931b7
