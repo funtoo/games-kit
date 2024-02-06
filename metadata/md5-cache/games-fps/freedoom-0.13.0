@@ -4,6 +4,6 @@ EAPI=7
 HOMEPAGE=https://freedoom.github.io
 KEYWORDS=*
 LICENSE=BSD
-RDEPEND==games-fps/freedoom-data-0.13.0 || ( games-fps/gzdoom games-engines/odamex games-fps/doomsday )
+RDEPEND==games-fps/freedoom-data-0.13.0 || ( games-engines/gzdoom games-engines/odamex games-fps/doomsday )
 SLOT=0
-_md5_=784a456ba13b03801db479d837d942f4
+_md5_=c5da14539c4c8c51a34c7f51be293054

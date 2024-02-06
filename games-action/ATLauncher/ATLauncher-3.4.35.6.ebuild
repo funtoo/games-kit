@@ -9,7 +9,7 @@ HOMEPAGE="https://atlauncher.com
 	https://github.com/ATLauncher/ATLauncher"
 SRC_URI="
 
-https://github.com/ATLauncher/ATLauncher/releases/download/v3.4.35.5/ATLauncher-3.4.35.5.jar -> ATLauncher-3.4.35.5.jar
+https://github.com/ATLauncher/ATLauncher/releases/download/v3.4.35.6/ATLauncher-3.4.35.6.jar -> ATLauncher-3.4.35.6.jar
 https://raw.githubusercontent.com/ATLauncher/ATLauncher/master/src/main/resources/assets/image/icon.ico -> ATLauncher.ico
 "
 KEYWORDS="*"
