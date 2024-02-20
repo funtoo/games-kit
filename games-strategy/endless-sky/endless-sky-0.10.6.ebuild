@@ -7,7 +7,7 @@ inherit python-any-r1 scons-utils xdg #toolchain-funcs xdg
 
 DESCRIPTION="Space exploration, trading & combat in the tradition of Terminal Velocity"
 HOMEPAGE="https://endless-sky.github.io"
-SRC_URI="https://github.com/endless-sky/endless-sky/tarball/0f764abe5e1c432ac6b687049d06adaa6085a1d9 -> endless-sky-0.10.4-0f764ab.tar.gz"
+SRC_URI="https://github.com/endless-sky/endless-sky/tarball/c457b7c379ada4fa865a70241ce01579849224a5 -> endless-sky-0.10.6-c457b7c.tar.gz"
 
 LICENSE="CC-BY-SA-4.0 CC-BY-SA-3.0 GPL-3+ public-domain"
 SLOT="0"
@@ -31,7 +31,7 @@ RDEPEND="
 	)"
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/endless-sky-endless-sky-0f764ab"
+S="${WORKDIR}/endless-sky-endless-sky-c457b7c"
 PATCHES=(
 	"${FILESDIR}"/"${PN}-0.9.16.1-respect-cflags.patch"
 	"${FILESDIR}"/"${PN}-0.9.14-no-games-path.patch"
