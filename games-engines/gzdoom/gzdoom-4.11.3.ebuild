@@ -8,17 +8,17 @@ DESCRIPTION="A modder-friendly OpenGL source port based on the DOOM engine"
 HOMEPAGE="https://zdoom.org"
 SRC_URI="https://github.com/ZDoom/gzdoom/tarball/6ce809efe2902e43ceaa7031b875225d3a0367de -> gzdoom-4.11.3-6ce809e.tar.gz"
 
-LICENSE="Apache-2.0 BSD BZIP2 GPL-3 LGPL-2.1+ LGPL-3 MIT
-	non-free? ( Activision ChexQuest3 DOOM-COLLECTORS-EDITION freedist WidePix )"
+LICENSE="Apache-2.0 BSD BZIP2 GPL-3 LGPL-2.1+ LGPL-3 MIT"
 SLOT="0"
 KEYWORDS="*"
-IUSE="debug gles2 gtk +non-free openmp +swr telemetry vulkan"
+IUSE="debug gles2 gtk openmp +swr telemetry vulkan"
 
 DEPEND="
 	app-arch/bzip2
 	media-libs/libjpeg-turbo:0=
 	media-libs/libsdl2[gles2?,opengl,vulkan?]
 	media-libs/libvpx:=
+	media-libs/libwebp
 	media-libs/openal
 	media-libs/zmusic
 	sys-libs/zlib
@@ -31,9 +31,6 @@ S="${WORKDIR}/ZDoom-gzdoom-6ce809e"
 src_prepare() {
 	rm -rf docs/licenses || die
 	rm -rf libraries/{bzip2,jpeg,zlib} || die
-	if ! use non-free ; then
-		rm -rf wadsrc_bm wadsrc_extra wadsrc_widepix || die
-	fi
 
 	cmake_src_prepare
 }
@@ -55,7 +52,6 @@ src_configure() {
 		-DHAVE_GLES2="$(usex gles2)"
 		-DNO_OPENMP="$(usex !openmp)"
 		-DZDOOM_ENABLE_SWR="$(usex swr)"
-		-DBUILD_NONFREE="$(usex non-free)"
 	)
 
 	use debug || append-cppflags -DNDEBUG
@@ -72,16 +68,6 @@ src_install() {
 
 pkg_postinst() {
 	xdg_pkg_postinst
-
-	if ! use non-free ; then
-		ewarn
-		ewarn "GZDoom installed without non-free components."
-		ewarn "Note: The non-free game_support.pk3 file is needed to play"
-		ewarn "      games natively supported by GZDoom."
-		ewarn "A list of games natively supported by GZDoom is available"
-		ewarn "on the ZDoom wiki: https://zdoom.org/wiki/IWAD"
-		ewarn
-	fi
 }
 
 # vim: noet ts=4 syn=ebuild
