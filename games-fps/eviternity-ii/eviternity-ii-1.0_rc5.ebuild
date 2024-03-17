@@ -4,7 +4,7 @@ EAPI=7
 
 DESCRIPTION="Eviternity II is a full 36-map megawad sequel to Eviternity; comprised of six 5-map Chapters, each with an additional secret level; it was created as a 30th birthday gift to Doom."
 HOMEPAGE="https://eviternity.dfdoom.com/"
-SRC_URI="https://eviternity-dl-us.dfdoom.com/Eviternity-II.zip -> Eviternity-II.zip"
+SRC_URI="https://eviternity-dl-eu.dfdoom.com/Eviternity-II.zip -> Eviternity-II.zip"
 
 LICENSE="freedist"
 SLOT="0"

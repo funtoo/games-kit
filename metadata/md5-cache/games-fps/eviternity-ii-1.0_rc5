@@ -5,5 +5,5 @@ HOMEPAGE=https://eviternity.dfdoom.com/
 KEYWORDS=*
 LICENSE=freedist
 SLOT=0
-SRC_URI=https://eviternity-dl-us.dfdoom.com/Eviternity-II.zip -> Eviternity-II.zip
-_md5_=0bdf0aa963a8e54acba093fbf7b56500
+SRC_URI=https://eviternity-dl-eu.dfdoom.com/Eviternity-II.zip -> Eviternity-II.zip
+_md5_=5739563d79bf78fb65602f5314ced19a
