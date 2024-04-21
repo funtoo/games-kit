@@ -6,7 +6,7 @@ inherit cmake desktop xdg flag-o-matic
 
 DESCRIPTION="A modder-friendly OpenGL source port based on the DOOM engine"
 HOMEPAGE="https://zdoom.org"
-SRC_URI="https://github.com/ZDoom/gzdoom/tarball/6ce809efe2902e43ceaa7031b875225d3a0367de -> gzdoom-4.11.3-6ce809e.tar.gz"
+SRC_URI="https://github.com/ZDoom/gzdoom/tarball/10a8a615cbaaa994ba9f6632c16ba3ce1a5c9430 -> gzdoom-4.12.1-10a8a61.tar.gz"
 
 LICENSE="Apache-2.0 BSD BZIP2 GPL-3 LGPL-2.1+ LGPL-3 MIT"
 SLOT="0"
@@ -25,7 +25,7 @@ DEPEND="
 	gtk? ( x11-libs/gtk+:3 )"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/ZDoom-gzdoom-6ce809e"
+S="${WORKDIR}/ZDoom-gzdoom-10a8a61"
 
 
 src_prepare() {
